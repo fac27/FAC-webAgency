@@ -2,3 +2,13 @@
 img {
     min-width: 100%;
 }
+
+.stack > * + * {
+    margin-top: 1rem;
+  }
+  .stack-sm > * + * {
+    margin-top: 0.5rem;
+  }
+  .stack-lg > * + * {
+    margin-top: 2rem;
+  }
