@@ -1,5 +1,4 @@
 /* mobile first */
-
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -12,10 +11,6 @@
 
 .justify-end {
     justify-content: flex-end;
-}
-
-.img {
-    min-width: 100%;
 }
 
 .stack-sm>*+* {
@@ -32,4 +27,8 @@
 
 .stack-xl>*+* {
     margin-top: 4rem;
+}
+
+.full-width {
+    max-width: 100%;
 }
