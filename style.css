@@ -13,3 +13,7 @@
 .justify-end {
     justify-content: flex-end;
 }
+    
+.img {
+    min-width: 100%;
+}
