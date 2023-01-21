@@ -4,7 +4,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-  }
+}
 
 .space-between {
     justify-content: space-between;
@@ -13,7 +13,23 @@
 .justify-end {
     justify-content: flex-end;
 }
-    
+
 .img {
     min-width: 100%;
+}
+
+.stack-sm>*+* {
+    margin-top: 0.5rem;
+}
+
+.stack-md>*+* {
+    margin-top: 1rem;
+}
+
+.stack-lg>*+* {
+    margin-top: 2rem;
+}
+
+.stack-xl>*+* {
+    margin-top: 4rem;
 }
