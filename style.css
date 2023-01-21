@@ -1,4 +1,4 @@
 /* mobile first */
-img {
-    min-width: 100%;
+.full-width {
+    max-width: 100%;
 }
