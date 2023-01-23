@@ -1,4 +1,10 @@
 /* mobile first */
+html {
+    scroll-behavior:  smooth;
+    scroll-padding-top: 3.2rem;
+}
+
+
 .row {
     display: flex;
     flex-wrap: wrap;
