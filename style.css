@@ -47,6 +47,11 @@ form {
     margin-right: auto;
     margin-left: auto;
 }
+
+.center_text {
+    text-align: center;
+}
+
 .center-lg {
     max-width: 20rem;
     margin-right: auto;
