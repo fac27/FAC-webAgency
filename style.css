@@ -1,6 +1,6 @@
 /* mobile first */
 html {
-    scroll-behavior:  smooth;
+    scroll-behavior: smooth;
     scroll-padding-top: 3.2rem;
 }
 
@@ -17,9 +17,9 @@ nav {
     padding-top: 0.7rem;
     padding-bottom: 2rem;
     top: 0;
-    left:0;
-    background: rgb(207,133,5);
-    background: linear-gradient(180deg, rgb(165, 133, 46) 0%, rgb(211, 164, 83) 49%, rgba(155,100,5,0) 83%);
+    left: 0;
+    background: rgb(207, 133, 5);
+    background: linear-gradient(180deg, rgb(165, 133, 46) 0%, rgb(211, 164, 83) 49%, rgba(155, 100, 5, 0) 83%);
 }
 
 form {
@@ -83,7 +83,26 @@ form {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.a--styledecoration-none {
+a {
     text-decoration: none;
-    color: inherit;
+    color: #18272F;
+    font-weight: 700;
+    position: relative;
+}
+
+a::before {
+    content: '';
+    background-color: rgba(88, 133, 167, 0.75);
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    width: 100%;
+    height: 4px;
+    z-index: -1;
+    transition: all .3s ease-in-out;
+}
+
+a:hover::before {
+    bottom: 0;
+    height: 100%;
 }
