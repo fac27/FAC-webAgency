@@ -5,6 +5,39 @@
     gap: 1rem;
 }
 
+nav {
+    position: fixed;
+    align-items: center;
+    width: 100%;
+    padding-top: 0.7rem;
+    padding-bottom: 2rem;
+    top: 0;
+    left:0;
+    background: rgb(207,133,5);
+    background: linear-gradient(180deg, rgb(165, 133, 46) 0%, rgb(211, 164, 83) 49%, rgba(155,100,5,0) 83%);
+}
+
+form {
+    width: 100%;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.center {
+    max-width: 15rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+.center-lg {
+    max-width: 20rem;
+}
+
+.center-sm {
+    max-width: 10rem;
+}
+
 .space-between {
     justify-content: space-between;
 }
@@ -31,4 +64,15 @@
 
 .full-width {
     max-width: 100%;
+}
+
+.round-top-corners {
+    border-radius: 50%;
+}
+
+.card-shadow {
+    background-color: rgb(225, 213, 197);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
