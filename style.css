@@ -11,6 +11,10 @@ body {
     font-family: 'Source Code Pro', monospace;
     background-color: var(--background-color);
  }
+html {
+    scroll-behavior:  smooth;
+    scroll-padding-top: 3.2rem;
+}
 
 .row {
     display: flex;
