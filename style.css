@@ -1,4 +1,17 @@
 /* mobile first */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+:root{
+    --background-color: rgb(255, 253, 243);
+    --main-box-color: rgb(225, 213, 197);
+    --secondary-color: rgb(251, 231, 197);
+}
+
+body {
+    font-family: 'Source Code Pro', monospace;
+    background-color: var(--background-color);
+ }
+
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -32,6 +45,8 @@ form {
 }
 .center-lg {
     max-width: 20rem;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .center-sm {
@@ -71,8 +86,17 @@ form {
 }
 
 .card-shadow {
-    background-color: rgb(225, 213, 197);
+    background-color: var(--main-box-color);
     padding: 1.5rem;
     border-radius: 1rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+    .card-shadow__secondary {
+        background-color: var(--secondary-color);
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        -webkit-border-radius: 0.5rem;
+        -moz-border-radius: 0.5rem;
+        -ms-border-radius: 0.5rem;
+        -o-border-radius: 0.5rem;
 }
