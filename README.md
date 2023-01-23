@@ -1,5 +1,7 @@
 # The Bug Fixers
 
+[The deployed github page](https://fac27.github.io/FAC-webAgency/)
+
 ## About the agency
 The Bug Fixers are a fictional team of highly trained professionals, dedicated to protecting what remains of humanity from the various pests that have overrun the world in the wake of the great pestilence.
 
