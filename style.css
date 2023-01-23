@@ -1,10 +1,10 @@
 /* mobile first */
-
 .row {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
 }
+
 nav {
     position: fixed;
     align-items: center;
