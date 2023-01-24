@@ -1,6 +1,11 @@
 /* mobile first */
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 
+/* || COLOR VARIABLES*/
+
+
+
+
 :root {
     --background-color: #73956F;
     --primary-color: #7BAE7F;
@@ -8,31 +13,34 @@
     --font-colour: #1a1b1c;
 }
 
-/* [data-theme="dark"] { 
-    --background-color: #958c6f;
-    --primary-color: #aeaa7b;
-    --secondary-color: #d7d095;
-    --font-colour: #1a1b1c;
-} */
+
+
+/* || GENERAL STYLES || */
+
+
+
 
 body {
     font-family: 'Source Code Pro', monospace;
     color: var(--font-colour);
     background-color: var(--background-color);
-    margin: 0;
     margin-top: 3.7rem;
+
 }
 
+
+/* scroll behaviour */
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 3.7rem;
 }
 
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
+
+
+
+
+/* || BLOCKS/COMPONENETS || */
+
 
 .nav {
     position: fixed;
@@ -45,100 +53,45 @@ html {
     background: linear-gradient(180deg, var(--background-color) 49%, rgba(155, 100, 5, 0) 83%);
 }
 
-form {
-    width: 100%;
+.card {
+    background-color: var(--primary-color);
+    padding: 1.5rem;
+    border-radius: 1rem;
 }
 
-/* .form__input--color {
-    background-color: var(--font-colour);
-} */
-
-.justify-center {
-    justify-content: center;
+.card--shadow {
+    box-shadow: 1px 6px 10px 0px rgba(0, 0, 0, 0.3), 0 10px 20px 0px rgba(0, 0, 0, 0.1);
 }
+
+.card--secondary {
+    background-color: var(--secondary-color);
+    border-radius: 1%;
+    /*removedborderradius*/
+    /*idkwhatlookedbestwelcometoaddbackin*/
+    -webkit-border-radius: 1%;
+    -moz-border-radius: 1%;
+    -ms-border-radius: 1%;
+    -o-border-radius: 1%;
+}
+
+
+
+
+
+/* || ELEMENTS || */
+
 
 .figure__title {
     display: block;
-    margin-inline-start: 40px;
-}
-
-.center {
-    display: block;
-    max-width: 15rem;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.center_text {
-    text-align: center;
-}
-
-.center-lg {
-    max-width: 20rem;
-}
-
-.center-sm {
-    max-width: 10rem;
-}
-
-.space-between {
-    justify-content: space-between;
-}
-
-.justify-end {
-    justify-content: flex-end;
-}
-
-.stack-sm>*+* {
-    margin-top: 0.5rem;
-}
-
-.stack-md>*+* {
-    margin-top: 1rem;
-}
-
-.stack-lg>*+* {
-    margin-top: 2rem;
-}
-
-.stack-xl>*+* {
-    margin-top: 4rem;
-}
-
-.full-width {
-    max-width: 100%;
+    /* margin-inline-start: 40px; */
 }
 
 .round-top-corners {
     border-radius: 50%;
-}
-
-.figure--sm {
-    margin-inline: 1rem;
-}
-
-.card-shadow {
-    background-color: var(--primary-color);
-    padding: 1.5rem;
-    border-radius: 1rem;
-    box-shadow: 1px 6px 10px 0px rgba(0, 0, 0, 0.3), 0 10px 20px 0px rgba(0, 0, 0, 0.1);
-}
-
-.card-shadow__secondary {
-    background-color: var(--secondary-color);
-    padding: 1.5rem;
-    /* removed border radius */
-    /* idk what looked best welcome to add back in*/
-}
-
-.hr__rounded {
-    border-top: 8px solid #bbb;
-    border-radius: 5px;
-    margin-inline: 1em;
-    border-style: solid;
-    box-shadow: 1px 3px 1px 0px rgba(0, 0, 0, 0.3), 0 10px 20px 0px rgba(0, 0, 0, 0.1);
-    border-color: var(--primary-color);
-    background-color: var(--primary-color);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
 a {
@@ -147,6 +100,8 @@ a {
     font-weight: 700;
     position: relative;
 }
+
+
 
 a::before {
     content: '';
@@ -160,7 +115,139 @@ a::before {
     transition: all .3s ease-in-out;
 }
 
+
+
 a:hover::before {
     bottom: 0;
     height: 100%;
 }
+
+
+
+
+
+/* || TYPOGRAPHY || */
+
+
+
+h1 {
+    /* Moves the heading so it isn't obscured
+    by the nav bar */
+    margin: 0;
+    margin-top: 3.7rem;
+}
+
+
+.center_text {
+    text-align: center;
+}
+
+/* || LAYOUT PRIMITIVES */
+
+
+
+/* Justify */
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+
+.space-between {
+    justify-content: space-between;
+}
+
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+
+
+
+/* Center */
+
+
+.full-width {
+    width: 100%;
+}
+
+
+.center {
+    display: block;
+    max-width: 15rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+.center-lg {
+    max-width: 20rem;
+}
+
+
+.center-sm {
+    max-width: 10rem;
+}
+
+
+
+
+/* Stacks */
+
+
+.stack-sm>*+* {
+    margin-top: 0.5rem;
+}
+
+
+.stack-md>*+* {
+    margin-top: 1rem;
+}
+
+
+.stack-lg>*+* {
+    margin-top: 2rem;
+}
+
+
+.stack-xl>*+* {
+    margin-top: 4rem;
+}
+
+
+.hr__rounded {
+    border-top: 8px solid #bbb;
+    border-radius: 5px;
+    margin-inline: 1em;
+    border-style: solid;
+    box-shadow: 1px 3px 1px 0px rgba(0, 0, 0, 0.3), 0 10px 20px 0px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-color);
+    background-color: var(--primary-color);
+}
+
+/* || STYLES GRAVEYARD || */
+
+
+
+/* Put styles we're experimenting with here and comment them out */
+
+/* .form__input--color {
+    background-color: var(--font-colour);
+} */
+
+/* 
+
+    [data-theme="dark"] { 
+    --background-color: #958c6f;
+    --primary-color: #aeaa7b;
+    --secondary-color: #d7d095;
+    --font-colour: #1a1b1c;
+} */
