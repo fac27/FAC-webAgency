@@ -1,7 +1,20 @@
 /* mobile first */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+:root {
+    --background-color: rgb(255, 253, 243);
+    --main-box-color: rgb(225, 213, 197);
+    --secondary-color: rgb(251, 231, 197);
+}
+
+body {
+    font-family: 'Source Code Pro', monospace;
+    background-color: var(--background-color);
+}
+
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 3.2rem;
+    scroll-padding-top: 3.7rem;
 }
 
 .row {
@@ -10,7 +23,7 @@ html {
     gap: 1rem;
 }
 
-nav {
+.nav {
     position: fixed;
     align-items: center;
     width: 100%;
@@ -18,8 +31,7 @@ nav {
     padding-bottom: 2rem;
     top: 0;
     left: 0;
-    background: rgb(207, 133, 5);
-    background: linear-gradient(180deg, rgb(165, 133, 46) 0%, rgb(211, 164, 83) 49%, rgba(155, 100, 5, 0) 83%);
+    background: linear-gradient(180deg, var(--background-color) 49%, rgba(155, 100, 5, 0) 83%);
 }
 
 form {
@@ -36,8 +48,14 @@ form {
     margin-left: auto;
 }
 
+.center_text {
+    text-align: center;
+}
+
 .center-lg {
     max-width: 20rem;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .center-sm {
@@ -77,10 +95,20 @@ form {
 }
 
 .card-shadow {
-    background-color: rgb(225, 213, 197);
+    background-color: var(--main-box-color);
     padding: 1.5rem;
     border-radius: 1rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-shadow__secondary {
+    background-color: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
 }
 
 a {
