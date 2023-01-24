@@ -14,11 +14,11 @@
                 <a href="#about"> About Us</a>
                 <a href="#contact">Contact</a>
             </nav>
-        </header> 
+            <h1 class="center-lg center_text"> The Bug Fixers</h1>
+        </header>
         <!-- content?  -->
         <!-- class= stack or container -->
-        <h1 class="center-lg center_text"> The Bug Fixers</h1>
-        <section class="center card-shadow__secondary full-width">
+        <section class="card-shadow__secondary full-width">
             <h2 id="home">Welcome</h2>
             <p>We are a team of highly trained professionals, dedicated to
                 protecting what remains of humanity from the rats, cockroaches
@@ -36,7 +36,7 @@
                 help you in this post-apocalyptic world.</p>
         </section>
         <section class="stack-lg">
-            <h2 class="center" id="about">Meet The Team</h2>
+            <h2 class="figure__title" id="about">Meet The Team</h2>
             <figure class="card-shadow">
                 <img class="full-width round-top-corners"
                     src="images/JohnSmith.png" alt="A grizzled older black
@@ -60,8 +60,9 @@
                     suit in a kitchen, there is a large flying
                     insect in front of him.">
                 <h3> Taha Hassan </h3>
-                <figcaption> Taha Hassan was training to be a web developer when 
-                    the Great Pestilence struck. And now spends his days valiantly fighting
+                <figcaption> Taha Hassan was training to be a web developer when
+                    the Great Pestilence struck. And now spends his days
+                    valiantly fighting
                     supernaturally-enhanced vermin.
                 </figcaption>
             </figure>
@@ -72,8 +73,9 @@
                     a fire extinguisher, there is a large insect
                     flying in front of him.">
                 <h3> Tom Freeman </h3>
-                <figcaption> Taha Hassan was training to be a web developer when 
-                    the Great Pestilence struck. And now spends his days valiantly fighting
+                <figcaption> Taha Hassan was training to be a web developer when
+                    the Great Pestilence struck. And now spends his days
+                    valiantly fighting
                     supernaturally-enhanced vermin.
                 </figcaption>
             </figure>
@@ -108,43 +110,48 @@
                     to carry out
                     its mission of protecting humanity from pests.</figcaption>
             </figure>
+            <hr class="hr__rounded">
+
         </section>
 
-        <form id="contact" class="stack-md center card-shadow">
-            <h2>Contact Us</h2>
-            <div class="stack-sm">
-                <label for="name">Name</label><br>
-                <input id="name" name="name" type="text" required/>
-            </div>
-            <div class="stack-sm">
-                <label for="email">Email</label><br>
-                <input id="email" name="email" type="email"
-                    required/>
-            </div>
-            <div class="stack-sm">
-                <label for="message">Message</label><br>
-                <textarea id="message" name="message"
-                    type="textarea" required></textarea>
-            </div>
-            <div class="stack-md">
+        <section>
+            <h2 class="figure__title">Contact Us</h2>
+            <form id="contact" class="stack-md center card-shadow">
                 <div class="stack-sm">
-                    <input type="radio" name="pest" value="rats"
-                        id="pest1">
-                    <label for="pest1">Rats</label>
-                    <input type="radio" name="pest" value="phone"
-                        id="pest2">
-                    <label for="pest2">Cockroaches</label>
-                    <input type="radio" name="pest" value="ooze"
-                        id="pest3">
-                    <label for="pest3">Ooze</label>
+                    <label for="name">Name</label><br>
+                    <input id="name" name="name" type="text" required/>
                 </div>
-                <div>
-                    <input type="checkbox" name="marketingConsent" id="marketingConsent">
-                    <label for="marketingConsent">Marketing Consent</label>
+                <div class="stack-sm">
+                    <label for="email">Email</label><br>
+                    <input id="email" name="email" type="email" class="form__input--color"
+                        required/>
                 </div>
-            </div>
-            <button type="submit">Submit</button>
-        </form>
+                <div class="stack-sm">
+                    <label for="message">Message</label><br>
+                    <textarea id="message" name="message"
+                        type="textarea" required></textarea>
+                </div>
+                <div class="stack-md">
+                    <div class="stack-sm">
+                        <input type="radio" name="pest" value="rats"
+                            id="pest1">
+                        <label for="pest1">Rats</label>
+                        <input type="radio" name="pest" value="phone"
+                            id="pest2">
+                        <label for="pest2">Cockroaches</label>
+                        <input type="radio" name="pest" value="ooze"
+                            id="pest3">
+                        <label for="pest3">Ooze</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="marketingConsent"
+                            id="marketingConsent">
+                        <label for="marketingConsent">Marketing Consent</label>
+                    </div>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
         <footer></footer>
         <script src="scripts.js"></script>
     </body>

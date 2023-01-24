@@ -2,14 +2,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 
 :root {
-    --background-color: rgb(255, 253, 243);
-    --main-box-color: rgb(225, 213, 197);
-    --secondary-color: rgb(251, 231, 197);
+    --background-color: #73956F;
+    --primary-color: #7BAE7F;
+    --secondary-color: #95D7AE;
+    --font-colour: #1a1b1c;
 }
+
+/* [data-theme="dark"] { 
+    --background-color: #958c6f;
+    --primary-color: #aeaa7b;
+    --secondary-color: #d7d095;
+    --font-colour: #1a1b1c;
+} */
 
 body {
     font-family: 'Source Code Pro', monospace;
+    color: var(--font-colour);
     background-color: var(--background-color);
+    margin: 0;
+    margin-top: 3.7rem;
 }
 
 html {
@@ -38,8 +49,17 @@ form {
     width: 100%;
 }
 
+/* .form__input--color {
+    background-color: var(--font-colour);
+} */
+
 .justify-center {
     justify-content: center;
+}
+
+.figure__title {
+    display: block;
+    margin-inline-start: 40px;
 }
 
 .center {
@@ -94,21 +114,31 @@ form {
     border-radius: 50%;
 }
 
+.figure--sm {
+    margin-inline: 1rem;
+}
+
 .card-shadow {
-    background-color: var(--main-box-color);
+    background-color: var(--primary-color);
     padding: 1.5rem;
     border-radius: 1rem;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 1px 6px 10px 0px rgba(0, 0, 0, 0.3), 0 10px 20px 0px rgba(0, 0, 0, 0.1);
 }
 
 .card-shadow__secondary {
     background-color: var(--secondary-color);
     padding: 1.5rem;
-    border-radius: 0.5rem;
-    -webkit-border-radius: 0.5rem;
-    -moz-border-radius: 0.5rem;
-    -ms-border-radius: 0.5rem;
-    -o-border-radius: 0.5rem;
+
+}
+
+.hr__rounded {
+    border-top: 8px solid #bbb;
+    border-radius: 5px;
+    margin-inline: 1em;
+    border-style: solid;
+    box-shadow: 1px 3px 1px 0px rgba(0, 0, 0, 0.3), 0 10px 20px 0px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-color);
+    background-color: var(--primary-color);
 }
 
 a {
@@ -120,7 +150,7 @@ a {
 
 a::before {
     content: '';
-    background-color: rgba(88, 133, 167, 0.75);
+    background-color: var(--primary-color);
     position: absolute;
     left: 0;
     bottom: 3px;
