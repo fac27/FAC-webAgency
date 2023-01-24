@@ -140,7 +140,6 @@ h1{
     text-align: center;
 }
 
-
 /* || LAYOUT PRIMITIVES */
 
 
@@ -152,7 +151,6 @@ h1{
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-}
 
 
 .justify-center {
@@ -189,8 +187,6 @@ h1{
 
 .center-lg {
     max-width: 20rem;
-    margin-right: auto;
-    margin-left: auto;
 }
 
 
