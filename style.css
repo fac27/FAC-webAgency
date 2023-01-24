@@ -128,7 +128,8 @@ form {
 .card-shadow__secondary {
     background-color: var(--secondary-color);
     padding: 1.5rem;
-
+    /* removed border radius */
+    /* idk what looked best welcome to add back in*/
 }
 
 .hr__rounded {
