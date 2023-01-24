@@ -22,7 +22,7 @@ html {
     gap: 1rem;
 }
 
-nav {
+.nav {
     position: fixed;
     align-items: center;
     width: 100%;
