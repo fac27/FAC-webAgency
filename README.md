@@ -30,6 +30,6 @@ We're going to add sections on services and pricing and a photo gallery. We're a
 
 1. Clone the repo into vscode using 
 ```
-git clone https://github.com/fac27/FAC-webAgency/"
+git clone https://github.com/fac27/FAC-webAgency/
 ```
 2. Launch the site using the [vscode liveserver extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
