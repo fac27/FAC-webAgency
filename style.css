@@ -22,7 +22,6 @@ body {
     color: var(--font-colour);
     background-color: var(--background-color);
     margin-top: 3.7rem;
-
 }
 
 
@@ -98,7 +97,7 @@ html {
 .nav--a {
     text-decoration: none;
     color: #18272F;
-    font-weight: 700;
+    font-weight: 600;
     position: relative;
 }
 
@@ -123,7 +122,22 @@ html {
         height: 100%;
     }
 
+.form--submit {
+    background-color: var(--primary-color);
+    margin-top: 2rem;
+    border: none;
+    border-radius: 1em;
+    padding: 0.5em;
+    padding-inline: 1em;
+}
 
+.form--submit:hover {
+    background-color: rgb(63, 164, 63);
+    outline-style: solid;
+    outline-width: 0.1em;
+    outline-color: whitesmoke;
+
+}
 
 
 
@@ -178,6 +192,7 @@ h1 {
 
 
 .full-width {
+    box-sizing: border-box;
     width: 100%;
 }
 
