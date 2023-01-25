@@ -131,12 +131,27 @@ html {
     padding-inline: 1em;
 }
 
-.form--submit:hover {
-    background-color: rgb(63, 164, 63);
-    outline-style: solid;
-    outline-width: 0.1em;
-    outline-color: whitesmoke;
+    .form--submit:hover {
+        background-color: rgb(63, 164, 63);
+        outline-style: solid;
+        outline-width: 0.1em;
+        outline-color: whitesmoke;
 
+    }
+
+.form--labels {
+    display: block;
+    margin-left: 0.5em;
+}
+
+.form--fields {
+    display: block;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-weight: inherit;
+  border: none;
+  border-radius: 0.4rem;
 }
 
 
@@ -219,6 +234,9 @@ h1 {
 
 /* Stacks */
 
+.stack-xs>*+* {
+    margin-top: 0.3rem;
+}
 
 .stack-sm>*+* {
     margin-top: 0.5rem;
@@ -238,7 +256,6 @@ h1 {
 .stack-xl>*+* {
     margin-top: 4rem;
 }
-
 
 
 
