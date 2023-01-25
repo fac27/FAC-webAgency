@@ -24,7 +24,8 @@ body {
     font-family: 'Source Code Pro', monospace;
     color: var(--font-colour);
     background-color: var(--background-color);
-    
+    margin-top: 3.7rem;
+
 }
 
 
@@ -58,18 +59,18 @@ html {
     border-radius: 1rem;
 }
 
-    .card--shadow {
-        box-shadow: 1px 6px 10px 0px rgba(0, 0, 0, 0.3), 0 10px 20px 0px rgba(0, 0, 0, 0.1);
-    }
+.card--shadow {
+    box-shadow: 1px 6px 10px 0px rgba(0, 0, 0, 0.3), 0 10px 20px 0px rgba(0, 0, 0, 0.1);
+}
 
-    .card--secondary {
-        background-color: var(--secondary-color);
-        border-radius: 1%;
-        /*removedborderradius*//*idkwhatlookedbestwelcometoaddbackin*/
-        -webkit-border-radius: 1%;
-        -moz-border-radius: 1%;
-        -ms-border-radius: 1%;
-        -o-border-radius: 1%;
+.card--secondary {
+    background-color: var(--secondary-color);
+    --radius: 0.5rem;
+    border-radius: var(--radius);
+    -webkit-border-radius: var(--radius);
+    -moz-border-radius: var(--radius);
+    -ms-border-radius: var(--radius);
+    -o-border-radius: var(--radius)
 }
 
 
@@ -128,7 +129,7 @@ a:hover::before {
 
 
 
-h1{
+h1 {
     /* Moves the heading so it isn't obscured
     by the nav bar */
     margin: 0;
@@ -151,7 +152,7 @@ h1{
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-
+}
 
 .justify-center {
     justify-content: center;
@@ -179,6 +180,7 @@ h1{
 
 
 .center {
+    display: block;
     max-width: 15rem;
     margin-right: auto;
     margin-left: auto;
@@ -205,19 +207,19 @@ h1{
 }
 
 
-    .stack-md>*+* {
-        margin-top: 1rem;
-    }
+.stack-md>*+* {
+    margin-top: 1rem;
+}
 
 
-        .stack-lg>*+* {
-            margin-top: 2rem;
-        }
+.stack-lg>*+* {
+    margin-top: 2rem;
+}
 
 
-            .stack-xl>*+* {
-                margin-top: 4rem;
-            }
+.stack-xl>*+* {
+    margin-top: 4rem;
+}
 
 
 .hr__rounded {
