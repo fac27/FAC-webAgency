@@ -20,4 +20,5 @@ As a user I want to:
 
 ## Approach
 
-The motto at the start was "more issues, less problems" but actually creating lots of tiny issues made the workflow extremely inefficient. We're at a point now we take responsibility for larger jobs and look over each other's work. Progress has been much faster.
+The motto at the start was "more issues, less problems" but actually creating lots of tiny issues made the workflow extremely inefficient. We're at a point now we take responsibility for larger jobs and look over each other's work. Progress has been much faster. 
+We have maintained a mobile first approach so there is expected deformation when viewing on a desktop, we have almost strictly kept our html tags to semantic element tags for accessibility purposes and have succefully sustained a 100% lighthouse rating while monitoring screen reader access. We have emphasised a strong structure in our css for readability, using 'chapters' to chunk related primitives and have also conserved a BEM naming convention where necessary.
