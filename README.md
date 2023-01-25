@@ -2,6 +2,9 @@
 
 [The deployed github page](https://fac27.github.io/FAC-webAgency/)
 
+## About the site
+This is a project for a software development bootcamp at Founders and Coders. We were asked to develop a website for an agency, we decided on a post-apocalyptic pest-control agency. For some reason.
+
 ## About the agency
 The Bug Fixers are a fictional team of highly trained professionals, dedicated to protecting what remains of humanity from the various pests that have overrun the world in the wake of the great pestilence.
 
