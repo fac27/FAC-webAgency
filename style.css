@@ -1,9 +1,6 @@
 /* mobile first */
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 
 /* || COLOR VARIABLES*/
-
-
 
 
 :root {
@@ -53,25 +50,35 @@ html {
     background: linear-gradient(180deg, var(--background-color) 49%, rgba(155, 100, 5, 0) 83%);
 }
 
+
+
 .card {
     background-color: var(--primary-color);
     padding: 1.5rem;
     border-radius: 1rem;
 }
 
-.card--shadow {
-    box-shadow: 1px 6px 10px 0px rgba(0, 0, 0, 0.3), 0 10px 20px 0px rgba(0, 0, 0, 0.1);
-}
+    .card--shadow {
+        box-shadow: 1px 6px 10px 0px rgba(0, 0, 0, 0.3), 0 10px 20px 0px rgba(0, 0, 0, 0.1);
+    }
+    .card--shadow__small {
+        border-top: 8px solid #bbb;
+        margin-inline: 1em;
+        border-style: solid;
+        box-shadow: 1px 3px 1px 0px rgba(0, 0, 0, 0.3), 0 10px 20px 0px rgba(0, 0, 0, 0.1);
+        border-color: var(--primary-color);
+        background-color: var(--primary-color);
+    }
 
-.card--secondary {
-    background-color: var(--secondary-color);
-    --radius: 0.5rem;
-    border-radius: var(--radius);
-    -webkit-border-radius: var(--radius);
-    -moz-border-radius: var(--radius);
-    -ms-border-radius: var(--radius);
-    -o-border-radius: var(--radius)
-}
+    .card--secondary {
+        background-color: var(--secondary-color);
+        --radius: 0.5rem;
+        border-radius: var(--radius);
+        -webkit-border-radius: var(--radius);
+        -moz-border-radius: var(--radius);
+        -ms-border-radius: var(--radius);
+        -o-border-radius: var(--radius)
+    }
 
 
 
@@ -80,12 +87,7 @@ html {
 /* || ELEMENTS || */
 
 
-.figure__title {
-    display: block;
-    /* margin-inline-start: 40px; */
-}
-
-.round-top-corners {
+.fig--img {
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -93,7 +95,7 @@ html {
     -o-border-radius: 50%;
 }
 
-a {
+.nav--a {
     text-decoration: none;
     color: #18272F;
     font-weight: 700;
@@ -102,24 +104,24 @@ a {
 
 
 
-a::before {
-    content: '';
-    background-color: var(--primary-color);
-    position: absolute;
-    left: 0;
-    bottom: 3px;
-    width: 100%;
-    height: 4px;
-    z-index: -1;
-    transition: all .3s ease-in-out;
-}
+    .nav--a::before {
+        content: '';
+        background-color: var(--primary-color);
+        position: absolute;
+        left: 0;
+        bottom: 3px;
+        width: 100%;
+        height: 4px;
+        z-index: -1;
+        transition: all .3s ease-in-out;
+    }
 
 
 
-a:hover::before {
-    bottom: 0;
-    height: 100%;
-}
+    .nav--a:hover::before {
+        bottom: 0;
+        height: 100%;
+    }
 
 
 
@@ -127,6 +129,7 @@ a:hover::before {
 
 /* || TYPOGRAPHY || */
 
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 
 
 h1 {
@@ -222,21 +225,18 @@ h1 {
 }
 
 
-.hr__rounded {
-    border-top: 8px solid #bbb;
-    border-radius: 5px;
-    margin-inline: 1em;
-    border-style: solid;
-    box-shadow: 1px 3px 1px 0px rgba(0, 0, 0, 0.3), 0 10px 20px 0px rgba(0, 0, 0, 0.1);
-    border-color: var(--primary-color);
-    background-color: var(--primary-color);
-}
+
 
 /* || STYLES GRAVEYARD || */
 
 
 
 /* Put styles we're experimenting with here and comment them out */
+
+/* .section--title {
+    display: block;
+    margin-inline-start: 40px;
+} */
 
 /* .form__input--color {
     background-color: var(--font-colour);

@@ -10,9 +10,9 @@
     <body class="stack-xl">
         <header>
             <nav class="full-width nav row justify-center">
-                <a href="#home"> Home </a>
-                <a href="#about"> About Us</a>
-                <a href="#contact">Contact</a>
+                <a class="nav--a" href="#home"> Home </a>
+                <a class="nav--a" href="#about"> About Us</a>
+                <a class="nav--a" href="#contact">Contact</a>
             </nav>
             <img class="center center-lg" src="images/logo.png" alt="TheBug Fixers" >
         </header>
@@ -36,9 +36,9 @@
                 help you in this post-apocalyptic world.</p>
         </section>
         <section class="stack-lg">
-            <h2 class="figure__title" id="about">Meet The Team</h2>
+            <h2 class="center_text" id="about">Meet The Team</h2>
             <figure class="card card--shadow">
-                <img class="full-width round-top-corners"
+                <img class="full-width fig--img"
                     src="images/JohnSmith.png" alt="A grizzled older black
                     man smoking a cigar and wearing a blue collared
                     shirt">
@@ -54,8 +54,8 @@
                     threaten us all.
                 </figcaption>
             </figure>
-            <figure class="card card-shadow">
-                <img class="full-width round-top-corners"
+            <figure class="card card--shadow">
+                <img class="full-width fig--img"
                     src="images/TahaHassan.png" alt="A person in a hazard
                     suit in a kitchen, there is a large flying
                     insect in front of him.">
@@ -66,8 +66,8 @@
                     supernaturally-enhanced vermin.
                 </figcaption>
             </figure>
-            <figure class="card card-shadow">
-                <img class="full-width round-top-corners"
+            <figure class="card card--shadow">
+                <img class="full-width fig--img"
                     src="images/TomasFreeman.png" alt="a person in a green
                     hazard suit in a kitchen holding what looks like
                     a fire extinguisher, there is a large insect
@@ -79,8 +79,8 @@
                     supernaturally-enhanced vermin.
                 </figcaption>
             </figure>
-            <figure class="card card-shadow">
-                <img class="full-width round-top-corners"
+            <figure class="card card--shadow">
+                <img class="full-width fig--img"
                     src="images/SarahJohnson.png" alt="An older woman with
                     light brown hair and glasses wearing a lab coat.
                     She is in a laboratory">
@@ -94,8 +94,8 @@
                     joined The Bug Fixers after
                     completing her PhD in Entomology.</figcaption>
             </figure>
-            <figure class="card card-shadow">
-                <img class="full-width round-top-corners"
+            <figure class="card card--shadow">
+                <img class="full-width fig--img"
                     src="images/MichelleBrown.png" alt="A woman with long,
                     dark hair and glasses. She's wearing a blue
                     collared-shirt.">
@@ -110,28 +110,28 @@
                     to carry out
                     its mission of protecting humanity from pests.</figcaption>
             </figure>
-            <hr class="hr__rounded">
+            <hr class="card card--shadow__small">
 
         </section>
 
-        <section>
-            <h2 class="figure__title">Contact Us</h2>
-            <form id="contact" class="stack-md center card card--secondary">
-                <div class="stack-sm">
+        <section class="full-width">
+            <h2 class="figure__title center_text">Contact Us</h2>
+            <form id="contact" class="stack-md full-width card card--secondary">
+                <div class="stack-sm center">
                     <label for="name">Name</label><br>
                     <input id="name" name="name" type="text" required/>
                 </div>
-                <div class="stack-sm">
+                <div class="stack-sm center">
                     <label for="email">Email</label><br>
                     <input id="email" name="email" type="email"
                         required/>
                 </div>
-                <div class="stack-sm">
+                <div class="stack-sm center">
                     <label for="message">Message</label><br>
                     <textarea id="message" name="message"
                         type="textarea" required></textarea>
                 </div>
-                <div class="stack-md">
+                <div class="stack-md center">
                     <div class="stack-sm">
                         <input type="radio" name="pest" value="rats"
                             id="pest1">
