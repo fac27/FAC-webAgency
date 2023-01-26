@@ -81,7 +81,10 @@ html {
         -o-border-radius: var(--radius)
     }
 
-
+input, textarea {
+    color: var(--secondary-color);
+    background-color: rgb(173, 166, 166);
+}
 
 
 /* || ELEMENTS || */
