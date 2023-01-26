@@ -124,7 +124,7 @@ html {
 
 .form--submit {
     background-color: var(--primary-color);
-    margin-top: 2rem;
+    margin-top: 0.5rem;
     border: none;
     border-radius: 1em;
     padding: 0.5em;
@@ -146,15 +146,17 @@ html {
 
 .form--fields {
     display: block;
-  margin: 0;
-  width: 100%;
-  font-family: inherit;
-  font-weight: inherit;
-  border: none;
-  border-radius: 0.4rem;
+    padding-inline: 1ch;
+    margin: 0;
+    font-family: inherit;
+    font-weight: inherit;
+    border: none;
+    border-radius: 0.4rem;
 }
 
-
+.fieldset__no-border {
+    border: none;
+}
 
 /* || TYPOGRAPHY || */
 
@@ -182,8 +184,11 @@ h1 {
 
 .row {
     display: flex;
-    flex-wrap: wrap;
     gap: 1rem;
+}
+
+.row__wrap {
+    flex-wrap: wrap;
 }
 
 .justify-center {
@@ -199,6 +204,11 @@ h1 {
 .justify-end {
     justify-content: flex-end;
 }
+
+.justify-start {
+    justify-content: flex-start;
+}
+
 
 
 

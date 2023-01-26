@@ -12,9 +12,11 @@
             <nav class="full-width nav row justify-center">
                 <a class="nav--a" href="#home"> Home </a>
                 <a class="nav--a" href="#about"> About Us</a>
+                <a class="nav--a" href="#quote">Quote</a>
                 <a class="nav--a" href="#contact">Contact</a>
             </nav>
-            <img class="center center-lg" src="images/logo.png" alt="TheBug Fixers" >
+            <img class="center center-lg" src="images/logo.png" alt="TheBug
+                Fixers">
         </header>
         <!-- content?  -->
         <!-- class= stack or container -->
@@ -111,19 +113,22 @@
                     its mission of protecting humanity from pests.</figcaption>
             </figure>
             <!-- temporary inline style for hr seperating, should be replaced -->
-            <hr class="card card--shadow__small" style="padding: 0px; margin-inline: 45px;">
+            <hr class="card card--shadow__small" style="padding: 0px;
+                margin-inline: 45px;">
         </section>
 
-        <section class="full-width">
+        <section id="contact" class="full-width" style="display: block;">
             <h2 class="figure__title center_text">Contact Us</h2>
-            <form id="contact" class="stack-md full-width card card--secondary">
+            <form class="stack-md full-width card card--secondary">
                 <div class="stack-xs center">
                     <label class="form--labels" for="name">Name</label>
-                    <input class="form--fields" id="name" name="name" type="text" required/>
+                    <input class="form--fields" id="name" name="name"
+                        type="text" required/>
                 </div>
                 <div class="stack-xs center">
                     <label class="form--labels" for="email">Email</label>
-                    <input class="form--fields" id="email" name="email" type="email"
+                    <input class="form--fields" id="email" name="email"
+                        type="email"
                         required/>
                 </div>
                 <div class="stack-xs center">
@@ -152,6 +157,105 @@
                     </div>
                     <button class="form--submit" type="submit">Submit</button>
                 </div>
+            </form>
+        </section>
+        <section id="quote" class="full-width" style="display: block;">
+            <h2 class="figure__title center_text">Quotes</h2>
+            <form id="contact" class="full-width card card--secondary"
+                onsubmit="givePrice(event)">
+                <fieldset class="stack-xs center fieldset__no-border">
+                    <label class="form--labels" for="name">Name</label>
+                    <input class="form--fields full-width" id="name" name="name"
+                        type="text" required/>
+                </fieldset>
+                <fieldset class="stack-xs center fieldset__no-border">
+                    <label class="form--labels" for="email">Email</label>
+                    <input class="form--fields full-width" id="email"
+                        name="email"
+                        type="email"
+                        required/>
+                </fieldset>
+                <fieldset class="stack-sm center fieldset__no-border">
+
+                    <fieldset class="stack-sm">
+                        <legend> Rats </legend>
+                        <fieldset class="row fieldset__no-border row__wrap">
+                            <div>
+                                <input
+                                    type="radio"
+                                    name="rats"
+                                    value="rats"
+                                    id="pest1"
+                                    onclick="askForQuantity('Rat')">
+                                <label for="pest1">infected</label>
+                            </div>
+                            <div>
+                                <input
+                                    type="radio"
+                                    name="rats"
+                                    value="rats"
+                                    id="pest1"
+                                    onclick="askForQuantity('Rat')">
+                                <label for="pest1">non-infected</label>
+                            </div>
+                        </fieldset>
+                        <fieldset id="quantityField" class="row
+                            justify-start
+                            fieldset__no-border">
+                            <label id="labelQuantity1" for="quantity1"> Quantity: </label>
+                            <input class="form--fields" type="number"
+                                name="quantity" value="0"
+                                id="quantity1" min="0" max="200" size="3ex">
+                        </fieldset>
+                    </fieldset>
+                    <fieldset class="stack-sm">
+                        <legend> Cockroaches </legend>
+                        <fieldset class="row fieldset__no-border row__wrap">
+                            <div>
+                                <input
+                                type="radio"
+                                name="rats"
+                                value="rats"
+                                id="pest1"
+                                onclick="askForQuantity('Rat')">
+                                <label for="pest1">infected</label>
+                            </div>
+                            <div>
+                                <input
+                                type="radio"
+                                name="rats"
+                                value="rats"
+                                id="pest1"
+                                onclick="askForQuantity('Rat')">
+                                <label for="pest1">non-infected</label>
+                            </div>
+                        </fieldset>
+                        <fieldset id="quantityField" class="row
+                        justify-start
+                        fieldset__no-border">
+                        <label id="labelQuantity1" for="quantity1"> Quantity: </label>
+                            <input class="form--fields" type="number"
+                            name="quantity" value="0"
+                            id="quantity1" min="0" max="200" size="3ex">
+                        </fieldset>
+                    </fieldset>
+                    <fieldset class="stack-sm">
+                        <legend> Oooze </legend>
+                        <fieldset id="quantityField" class="row
+                            justify-start
+                            fieldset__no-border">
+                            <label id="labelQuantity1" for="quantity1"> Quantity (sqrFt): </label>
+                            <input class="form--fields" type="number"
+                                name="quantity" value="0"
+                                id="quantity1" min="0" max="200" size="3ex">
+                        </fieldset>
+                    </fieldset>
+                </fieldset>
+                <fieldset class="center fieldset__no-border">
+                    <button class="form--submit" type="submit">Price</button>
+                    <p style="display: none;"> = </p>
+                    <output name="output"> </output>
+                </fieldset>
             </form>
         </section>
         <footer></footer>
