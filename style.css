@@ -7,8 +7,8 @@
     --background-color: #b0f4aa;
     --primary-color: #e4bb7d;
     --secondary-color: #ecffe6;
-    --button-color-1: #ffeaa5;
-    --button-color-2: #e3e3e3;
+    --accent-color-1: #ffeaa5;
+    --accent-color-2: #e3e3e3;
     --font-colour: #1a1b1c;
 }
 
@@ -80,34 +80,8 @@ html {
         -ms-border-radius: var(--radius);
         -o-border-radius: var(--radius)
     }
-.tab {
-    display: flex;
-    background-color: var(--primary-color);
-}
-.tab--content {
-    display: none;
-    background-color: #eeda98;
-    padding: 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.13);
-    border-top: none;
-    }
-.tab--button {
-    background-color: #eeda98;
-    border: none;
-    padding: 0.5rem;
-    outline: none;
-    cursor: pointer;
-    transition: 0.3s;
-    border: 1px solid rgba(0, 0, 0, 0.13);
-    border-bottom: none;
-}
-.tab--button:hover {
-    background-color: var(--button-color-2);
-  }
 
-.active {
-    background-color: var(--button-color-1);
-}
+
 
 
 /* || ELEMENTS || */
@@ -148,6 +122,40 @@ html {
         bottom: 0;
         height: 100%;
     }
+
+
+/* These classnames are JS variables */
+.tab--content {
+    /*styles the info on services section */
+    display: none;
+    background-color: #eeda98;
+    padding: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.13);
+    border-top: none;
+    }
+    .tab--button {
+    /*styles the buttons on the services section */
+        background-color: #eeda98;
+        border: none;
+        padding: 0.5rem;
+        outline: none;
+        cursor: pointer;
+        transition: 0.3s;
+        border: 1px solid rgba(0, 0, 0, 0.13);
+        border-bottom: none;
+    }
+    .tab--button:hover {
+        background-color: var(--accent-color-2);
+      }
+    
+    .active {
+    /*sets the background colour of the active tab to be slightly brighter*/
+        background-color: var(--accent-color-1);
+    }
+
+
+
+
 
 .form--submit {
     background-color: var(--primary-color);
@@ -212,6 +220,9 @@ h1 {
     flex-wrap: wrap;
     gap: 1rem;
 }
+    .row__nogap {
+        gap: 0rem;
+    }
 
 .justify-center {
     justify-content: center;
