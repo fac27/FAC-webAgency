@@ -4,9 +4,11 @@
 
 
 :root {
-    --background-color: #73956F;
-    --primary-color: #7BAE7F;
-    --secondary-color: #95D7AE;
+    --background-color: #b0f4aa;
+    --primary-color: #dbae69;
+    --secondary-color: #ecffe6;
+    --button-color-1: #ffeaa5;
+    --button-color-2: #e3e3e3;
     --font-colour: #1a1b1c;
 }
 
@@ -78,11 +80,32 @@ html {
         -ms-border-radius: var(--radius);
         -o-border-radius: var(--radius)
     }
-
+.tab {
+    display: flex;
+    background-color: var(--primary-color);
+}
 .tab__content {
     display: none;
+    background-color: var(--button-color-1);
+    padding: 1rem;
     }
+.tab__button {
+    background-color: var(--button-color-1);
+    border: none;
+    padding: 0.5rem;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 1px solid rgba(0, 0, 0, 0.13);
+    border-bottom: none;
+}
+.tab__button:hover {
+    background-color: var(--button-color-2);
+  }
 
+.active {
+    background-color: var(--button-color-1);
+}
 
 
 /* || ELEMENTS || */
