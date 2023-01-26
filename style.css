@@ -5,7 +5,7 @@
 
 :root {
     --background-color: #b0f4aa;
-    --primary-color: #dbae69;
+    --primary-color: #e4bb7d;
     --secondary-color: #ecffe6;
     --button-color-1: #ffeaa5;
     --button-color-2: #e3e3e3;
@@ -84,13 +84,15 @@ html {
     display: flex;
     background-color: var(--primary-color);
 }
-.tab__content {
+.tab--content {
     display: none;
-    background-color: var(--button-color-1);
+    background-color: #eeda98;
     padding: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.13);
+    border-top: none;
     }
-.tab__button {
-    background-color: var(--button-color-1);
+.tab--button {
+    background-color: #eeda98;
     border: none;
     padding: 0.5rem;
     outline: none;
@@ -99,7 +101,7 @@ html {
     border: 1px solid rgba(0, 0, 0, 0.13);
     border-bottom: none;
 }
-.tab__button:hover {
+.tab--button:hover {
     background-color: var(--button-color-2);
   }
 
@@ -164,20 +166,20 @@ html {
 
     }
 
-.form--labels {
-    display: block;
-    margin-left: 0.5em;
-}
+    .form--labels {
+        display: block;
+        margin-left: 0.5em;
+    }
 
-.form--fields {
-    display: block;
-  margin: 0;
-  width: 100%;
-  font-family: inherit;
-  font-weight: inherit;
-  border: none;
-  border-radius: 0.4rem;
-}
+    .form--fields {
+        display: block;
+    margin: 0;
+    width: 100%;
+    font-family: inherit;
+    font-weight: inherit;
+    border: none;
+    border-radius: 0.4rem;
+    }
 
 
 
