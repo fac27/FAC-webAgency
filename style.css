@@ -35,7 +35,7 @@ html {
 
 
 
-/* || BLOCKS COMPONENETS || */
+/* || BLOCKS / COMPONENETS || */
 
 
 .nav {
@@ -79,7 +79,9 @@ html {
         -o-border-radius: var(--radius)
     }
 
-
+.tab__content {
+    display: none;
+    }
 
 
 
