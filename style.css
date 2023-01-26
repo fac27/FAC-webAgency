@@ -296,6 +296,15 @@ h1 {
 }
 
 
+/* || MEDIA QUERIES ||  */
+@media (min-width:600px) {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        row-gap: 1rem;
+      }
+}
+
 
 /* || STYLES GRAVEYARD || */
 
