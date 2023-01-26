@@ -35,6 +35,43 @@
                 clients. Contact us today to learn more about how we can
                 help you in this post-apocalyptic world.</p>
         </section>
+        <section class="card">
+            <h2 class="center_text">Services</h2>
+            <p>At The Bug Fixers we offer a wide range of extermination services to our clients, they are tailored to the specific type of pest and the severity of the infestation. Whether it's rodents, cockroaches, or oozes.</p>
+           
+            <!-- tab--button and tab--content are JS variables, ID fields are used by JS too
+                be careful about changing them!-->
+            
+            <!-- Buttons used to switch between different servies -->
+            <div class="row row__nogap card--shadow">
+                <button class="tab--button active" onclick="openPest(event, 'rats')">Rats</button>
+                <button class="tab--button" onclick="openPest(event, 'cockroaches')">Cockroaches</button>
+                <button class="tab--button" onclick="openPest(event, 'ooze')">Ooze</button>
+              </div>
+              
+              <!-- Tab content -->
+              <div id="rats" class="card--shadow tab--content active">
+                <h3>Rats</h3>
+                <p>Our rodent control services include trapping and extermination of rats, mice, and other rodents that threaten to consume what little is left of our civilization.</p>
+                <p><b>Regular: </b></p><p> prices from 200</p>
+                <p><b>Mutant: </b></p><p>prices from 500</p>
+              </div>
+              
+              <div id="cockroaches" class=" card--shadow tab--content">
+                <h3>Cockroaches</h3>
+                <p>Our cockroach control services include extermination of cockroaches and other common household pests. We use the latest in extermination technology and techniques to eliminate these pests.</p>
+                <p><b>Regular: </b></p><p> prices from 200</p>
+                <p><b>Irradiated: </b></p><p>prices from 500</p>
+              </div>
+              
+              <div id="ooze" class="card--shadow tab--content">
+                <h3>Ooze</h3>
+                <p>Our Ooze control service would include the extermination of this new, dangerous pest called the "ooze". Our team of experts would use the latest techniques and technology to eliminate this pest and prevent it from spreading.</p>
+                <p><b>Regular: </b></p><p> prices from 2000</p>
+                <p><b>Magical/Cursed: </b></p><p>prices from 3000</p>
+              </div>
+        </section>
+
         <section class="stack-lg">
             <h2 class="center_text" id="about">Meet The Team</h2>
             <figure class="card card--shadow">
