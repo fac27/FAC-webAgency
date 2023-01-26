@@ -197,6 +197,9 @@ input, textarea {
     border: none;
 }
 
+.fieldset__round-corners {
+    border-radius: 1rem;
+}
 /* || TYPOGRAPHY || */
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
