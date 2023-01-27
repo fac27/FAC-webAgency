@@ -9,14 +9,23 @@
     </head>
     <body class="stack-xl">
         <header>
-            <nav class="full-width nav row justify-center">
-                <a class="nav--a" href="#home"> Home </a>
-                <a class="nav--a" href="#about"> About Us</a>
-                <a class="nav--a" href="#services"> Services</a>
-                <a class="nav--a" href="#quote" onclick="toggleForms('quote',
-                    'contact')"> Quote</a>
-                <a class="nav--a" href="#contact"
-                    onclick="toggleForms('contact', 'quote')"> Contact</a>
+            <nav class="full-width nav">
+                <ul class="nav--ul full-width row space-around">
+                    <li class="nav--li"><a class="nav--a" href="#home"> Home </a></li>
+                    <li class="nav--li"><a class="nav--a" href="#services"> Services</a></li>
+                    <li class="nav--li"><a class="nav--a" href="#about"> About Us</a></li>
+                    <li class="nav--li nav--submenu"><a class="nav--a">
+                        Contact
+                  </a>
+                      <ul class="nav--a__hidden nav--ul">
+                        <li class="nav--li"><a class="nav--a" href="#quote" onclick="toggleForms('quote','contact')"> Quote</a></li>
+                        <li class="nav--li"><a class="nav--a" href="#contact" onclick="toggleForms('contact', 'quote')"> Contact</a> </li>
+                      </ul> 
+                    </li>
+                    
+                    
+                </ul>
+                
             </nav>
             <img class="center center-lg" src="images/logo.png" alt="TheBug
                 Fixers">
