@@ -1,3 +1,6 @@
+//ensures the rats tab is displayed on render
+document.getElementById("rats").style.display = "block"
+
 function openPest(evt, pestName) {
     // Declare all variables
     var i, tabcontent, tablinks;
