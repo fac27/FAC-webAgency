@@ -21,26 +21,50 @@ function openPest(evt, pestName) {
     evt.currentTarget.className += " active";
 };
 
+// onsubmit give the total price given how many of each type of bug.
 function givePrice(event) {
+    // stops refresh
     event.preventDefault();
+    // list of all elements in form 
     var elements = event.target.elements;
     console.log(elements.rat.value);
     var ratPrice, cockPrice;
+    // find whether they are mutants or regular rats/cockroaches and times that value by how many wer listed in number input
     elements.rat.value == 'ratR' ? ratPrice = elements.quantity1.value * 200 : ratPrice = elements.quantity1.value * 500
     elements.cock.value == 'cockR' ? cockPrice = elements.quantity2.value * 200 : cockPrice = elements.quantity2.value * 500
     let oozePrice = elements.quantity3.value * 3000; 
     var quantity = ratPrice + cockPrice + oozePrice;
     console.log(quantity);
+
+    // change sidemenu values doesnt work if you submitted in mobile then use desktop, have to press submit on desktop
+    // check sidemenu is visible/media
+    if (window.matchMedia('(min-width: 600px)').matches) {
+        priceView('rat', ratPrice, elements);
+        priceView('cock', cockPrice, elements);
+    }
+
+    // output to output tag the quantity calculated above
     document.getElementsByTagName('output')[0].value = '= £' + quantity;
 };
 
-// function askForQuantity(pest) {
-//     document.getElementById('quantityField').style.display = 'flex';
-//     // check if quantity field isnt showing 
-//     document.getElementById('labelQuantity1').innerHTML = pest;
+function priceView(pest, price, elements) {
+    if (price != 0) {
+        var spanIndex = -1;
+        pest == 'rat' ? spanIndex = 0 : spanIndex = 1;
+        var span = document.getElementsByTagName('span')[spanIndex];
+        span.style.display = 'block';
+        console.log(elements, elements[pest])
+        if (elements[pest].value == pest + 'M') {
+            span.children[0].innerHTML = 'Rats (mutated)'; 
+            span.children[1].innerHTML = '£500 x ' + elements['quantity' + spanIndex].value;
+        } else {
+            span.children[0].innerHTML = 'Rats (regular)';
+            span.children[1].innerHTML = '£200 x ' + elements['quantity' + spanIndex].value;
+        }
+        span.children[2].innerHTML = '= £' + price;
+    }
+}
 
-//     document.getElementById("rats").style.display = "block";
-// }
 
 function toggleForms(show, hide) {
     document.getElementById(show).style.display = 'block';

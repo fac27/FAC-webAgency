@@ -97,17 +97,19 @@
                         src="images/JohnSmith.png" alt="A grizzled older black
                         man smoking a cigar and wearing a blue collared
                         shirt">
-                    <h3> John Smith </h3>
-                    <figcaption> John Smith is a former military veteran
-                        with extensive
-                        experience in urban warfare and pest control. He
-                        founded the
-                        The Bug Fixers in the aftermath of the
-                        great pestilence, with the goal of protecting
-                        what remains
-                        of humanity from the hordes of pests that
-                        threaten us all.
-                    </figcaption>
+                   <article class="card--article__inline">
+                       <h3> John Smith </h3>
+                   <figcaption> John Smith is a former military veteran
+                       with extensive
+                       experience in urban warfare and pest control. He
+                       founded the
+                       The Bug Fixers in the aftermath of the
+                       great pestilence, with the goal of protecting
+                       what remains
+                       of humanity from the hordes of pests that
+                       threaten us all.
+                   </figcaption>
+                   </article>
                 </figure>
                 <figure class="card card--shadow">
                     <img class="full-width fig--img"
@@ -201,27 +203,34 @@
                 </div>
             </form>
         </section>
-        <section id="quote" class="full-width" style="display: none;">
+        <section id="quote" class="full-width" style="display: block;">
             <h2 class="figure__title center_text">Quotes</h2>
-            <form id="contact" class="full-width card card--secondary"
+            <form id="contact" class="full-width card card--secondary form__grid_on-desktop"
                 onsubmit="givePrice(event)">
-                <fieldset class="stack-xs center fieldset__no-border">
-                    <label class="form--labels" for="name">Name</label>
-                    <input class="form--fields full-width" id="name" name="name"
-                        type="text" required/>
+                <fieldset class="stack-md form--header fieldset__no-border">
+                    <div class="stack-xs center fieldset__no-border">
+                        <label class="form--labels" for="name">Name</label>
+                        <input 
+                            class="form--fields full-width" 
+                            id="name" 
+                            name="name"
+                            type="text" value='tom' required/>
+                    </div>
+                    <div class="stack-xs center fieldset__no-border">
+                        <label class="form--labels" for="email">Email</label>
+                        <input 
+                            class="form--fields full-width" 
+                            id="email"
+                            name="email"
+                            type="email"
+                            value='tom@g.com'
+                            required/>
+                    </div>
                 </fieldset>
-                <fieldset class="stack-xs center fieldset__no-border">
-                    <label class="form--labels" for="email">Email</label>
-                    <input class="form--fields full-width" id="email"
-                        name="email"
-                        type="email"
-                        required/>
-                </fieldset>
-                <fieldset class="stack-sm center fieldset__no-border">
-
+                <fieldset class="stack-sm center fieldset__no-border form--main">
                     <fieldset class="stack-sm fieldset__round-corners">
                         <legend> Rats </legend>
-                        <fieldset class="row fieldset__no-border row__wrap">
+                        <fieldset class="row fieldset__no-border row__wrap ">
                             <div>
                                 <input
                                     type="radio"
@@ -235,17 +244,18 @@
                                     type="radio"
                                     name="rat"
                                     value="ratR"
-                                    id="ratR">
+                                    id="ratR"
+                                    checked="true">
                                 <label for="ratR">Regular </label>
                             </div>
                         </fieldset>
                         <fieldset id="quantityField" class="row
-                            justify-start
+                            space-between
                             fieldset__no-border">
                             <label id="labelQuantity1" for="quantity1">
                                 Quantity: </label>
                             <input class="form--fields" type="number"
-                                name="quantity" value="0"
+                                name="quantity" value="2"
                                 id="quantity1" min="0" max="200" size="3ex">
                         </fieldset>
                     </fieldset>
@@ -270,7 +280,7 @@
                             </div>
                         </fieldset>
                         <fieldset id="quantityField" class="row
-                            justify-start
+                            space-between
                             fieldset__no-border">
                             <label id="labelQuantity1" for="quantity2">
                                 Quantity: </label>
@@ -282,7 +292,7 @@
                     <fieldset class="stack-sm fieldset__round-corners">
                         <legend> Oooze </legend>
                         <fieldset id="quantityField" class="row
-                            justify-start
+                            space-between
                             fieldset__no-border">
                             <label id="labelQuantity1" for="quantity3"> Quantity
                                 (sqrFt): </label>
@@ -292,9 +302,29 @@
                         </fieldset>
                     </fieldset>
                 </fieldset>
-                <fieldset class="center fieldset__no-border">
+                <fieldset class="center fieldset__no-border form--sidebar form--grid__align-start">
+                    <span class="quote--sum" style="display: none;"> 
+                        <p > Rats </p>
+                        <p > £200 x 2 </p>
+                        <p > = £400 </p>
+                        <hr>
+                    </span>
+                    <span class="quote--sum" style="display: none;"> 
+                        <p > Cockroaches </p>
+                        <p > £200 x 2 </p>
+                        <p > = £200 </p>
+                        <hr>
+                    </span>
+                    <span class="quote--sum" style="display: none;"> 
+                        <p > Ooze </p>
+                        <p > £3000 x 1 </p>
+                        <p > = £3000 </p>
+                        <hr>
+                    </span>
+                    <output name="output"> </output>
+                </fieldset>
+                <fieldset class="center fieldset__no-border form--sidebar form--grid__align-end">
                     <button class="form--submit" type="submit">Price</button>
-                    <p style="display: none;"> = </p>
                     <output name="output"> </output>
                 </fieldset>
             </form>
