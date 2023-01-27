@@ -74,8 +74,9 @@ function givePrice(event) {
             var span = document.getElementsByTagName('span')[2];
             // make visible
             span.style.display = 'block';
+            span.children[0].innerHTML = 'Ooze'
             span.children[1].innerHTML = '£3000 x ' + elements.quantity3.value;
-            span.children[2].innerHTML = 'Total = £' + cockPrice;
+            span.children[2].innerHTML = '= £' + oozePrice;
         };
     }
 
