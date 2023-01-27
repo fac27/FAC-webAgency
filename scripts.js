@@ -39,31 +39,41 @@ function givePrice(event) {
     // change sidemenu values doesnt work if you submitted in mobile then use desktop, have to press submit on desktop
     // check sidemenu is visible/media
     if (window.matchMedia('(min-width: 600px)').matches) {
-        priceView('rat', ratPrice, elements);
-        priceView('cock', cockPrice, elements);
+        if (ratPrice != 0) {
+            var span = document.getElementsByTagName('span')[0];
+            span.style.display = 'block';
+            if (elements.rat.value == 'ratM') {
+                span.children[0].innerHTML = 'Rats (mutated)'; 
+                span.children[1].innerHTML = '£500 x ' + elements.quantity1.value;
+            } else {
+                span.children[0].innerHTML = 'Rats (regular)';
+                span.children[1].innerHTML = '£200 x ' + elements.quantity1.value;
+            }
+            span.children[2].innerHTML = '= £' + ratPrice;
+        };
+        if (cockPrice != 0) {
+            var span = document.getElementsByTagName('span')[1];
+            span.style.display = 'block';
+            if (elements.cock.value == 'cockM') {
+                span.children[0].innerHTML = 'Cockroaches (mutated)'; 
+                span.children[1].innerHTML = '£500 x ' + elements.quantity2.value;
+            } else {
+                span.children[0].innerHTML = 'Cockroaches (regular)';
+                span.children[1].innerHTML = '£200 x ' + elements.quantity2.value;
+            }
+            span.children[2].innerHTML = '= £' + cockPrice;
+        };
+        if (oozePrice != 0) {
+            var span = document.getElementsByTagName('span')[2];
+            span.style.display = 'block';
+            span.children[1].innerHTML = '£3000 x ' + elements.quantity3.value;
+            span.children[2].innerHTML = 'Total = £' + cockPrice;
+        };
     }
 
     // output to output tag the quantity calculated above
-    document.getElementsByTagName('output')[0].value = '= £' + quantity;
+    document.getElementsByTagName('output')[0].value = 'TOTAL = £' + quantity;
 };
-
-function priceView(pest, price, elements) {
-    if (price != 0) {
-        var spanIndex = -1;
-        pest == 'rat' ? spanIndex = 0 : spanIndex = 1;
-        var span = document.getElementsByTagName('span')[spanIndex];
-        span.style.display = 'block';
-        console.log(elements, elements[pest])
-        if (elements[pest].value == pest + 'M') {
-            span.children[0].innerHTML = 'Rats (mutated)'; 
-            span.children[1].innerHTML = '£500 x ' + elements['quantity' + spanIndex].value;
-        } else {
-            span.children[0].innerHTML = 'Rats (regular)';
-            span.children[1].innerHTML = '£200 x ' + elements['quantity' + spanIndex].value;
-        }
-        span.children[2].innerHTML = '= £' + price;
-    }
-}
 
 
 function toggleForms(show, hide) {
