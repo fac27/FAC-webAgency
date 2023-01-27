@@ -81,7 +81,10 @@ html {
         -o-border-radius: var(--radius)
     }
 
-
+input, textarea {
+    color: var(--secondary-color);
+    background-color: rgb(173, 166, 166);
+}
 
 
 /* || ELEMENTS || */
@@ -159,7 +162,7 @@ html {
 
 .form--submit {
     background-color: var(--primary-color);
-    margin-top: 2rem;
+    margin-top: 0.5rem;
     border: none;
     border-radius: 1em;
     padding: 0.5em;
@@ -179,18 +182,24 @@ html {
         margin-left: 0.5em;
     }
 
-    .form--fields {
-        display: block;
+.form--fields {
+    display: block;
+    padding-inline: 1ch;
     margin: 0;
-    width: 100%;
+
     font-family: inherit;
     font-weight: inherit;
     border: none;
     border-radius: 0.4rem;
-    }
+}
 
+.fieldset__no-border {
+    border: none;
+}
 
-
+.fieldset__round-corners {
+    border-radius: 1rem;
+}
 /* || TYPOGRAPHY || */
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
@@ -217,12 +226,15 @@ h1 {
 
 .row {
     display: flex;
-    flex-wrap: wrap;
     gap: 1rem;
 }
     .row__nogap {
         gap: 0rem;
     }
+
+.row__wrap {
+    flex-wrap: wrap;
+}
 
 .justify-center {
     justify-content: center;
@@ -237,6 +249,11 @@ h1 {
 .justify-end {
     justify-content: flex-end;
 }
+
+.justify-start {
+    justify-content: flex-start;
+}
+
 
 
 
