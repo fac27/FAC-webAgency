@@ -21,6 +21,7 @@ function openPest(evt, pestName) {
     evt.currentTarget.className += " active";
 };
 
+
 // onsubmit give the total price given how many of each type of bug.
 function givePrice(event) {
     // stops refresh
@@ -32,18 +33,20 @@ function givePrice(event) {
     // find whether they are mutants or regular rats/cockroaches and times that value by how many wer listed in number input
     elements.rat.value == 'ratR' ? ratPrice = elements.quantity1.value * 200 : ratPrice = elements.quantity1.value * 500
     elements.cock.value == 'cockR' ? cockPrice = elements.quantity2.value * 200 : cockPrice = elements.quantity2.value * 500
-    let oozePrice = elements.quantity3.value * 3000; 
+    let oozePrice = elements.quantity3.value * 3000;
     var quantity = ratPrice + cockPrice + oozePrice;
     console.log(quantity);
 
     // change sidemenu values doesnt work if you submitted in mobile then use desktop, have to press submit on desktop
     // check sidemenu is visible/media
     if (window.matchMedia('(min-width: 600px)').matches) {
+        // check which items are in basket (have a price)
         if (ratPrice != 0) {
             var span = document.getElementsByTagName('span')[0];
+            // make visible
             span.style.display = 'block';
             if (elements.rat.value == 'ratM') {
-                span.children[0].innerHTML = 'Rats (mutated)'; 
+                span.children[0].innerHTML = 'Rats (mutated)';
                 span.children[1].innerHTML = '£500 x ' + elements.quantity1.value;
             } else {
                 span.children[0].innerHTML = 'Rats (regular)';
@@ -53,9 +56,10 @@ function givePrice(event) {
         };
         if (cockPrice != 0) {
             var span = document.getElementsByTagName('span')[1];
+            // make visible
             span.style.display = 'block';
             if (elements.cock.value == 'cockM') {
-                span.children[0].innerHTML = 'Cockroaches (mutated)'; 
+                span.children[0].innerHTML = 'Cockroaches (mutated)';
                 span.children[1].innerHTML = '£500 x ' + elements.quantity2.value;
             } else {
                 span.children[0].innerHTML = 'Cockroaches (regular)';
@@ -65,6 +69,7 @@ function givePrice(event) {
         };
         if (oozePrice != 0) {
             var span = document.getElementsByTagName('span')[2];
+            // make visible
             span.style.display = 'block';
             span.children[1].innerHTML = '£3000 x ' + elements.quantity3.value;
             span.children[2].innerHTML = 'Total = £' + cockPrice;
@@ -76,6 +81,7 @@ function givePrice(event) {
 };
 
 
+// swith visibility between quote and contact forms
 function toggleForms(show, hide) {
     document.getElementById(show).style.display = 'block';
     document.getElementById(hide).style.display = 'none';

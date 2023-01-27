@@ -203,7 +203,7 @@
                 </div>
             </form>
         </section>
-        <section id="quote" class="full-width" style="display: block;">
+        <section id="quote" class="full-width" style="display: none;">
             <h2 class="figure__title center_text">Quotes</h2>
             <form id="contact" class="full-width card card--secondary form__grid_on-desktop"
                 onsubmit="givePrice(event)">
@@ -214,7 +214,8 @@
                             class="form--fields full-width" 
                             id="name" 
                             name="name"
-                            type="text" value='tom' required/>
+                            type="text" 
+                            required/>
                     </div>
                     <div class="stack-xs center fieldset__no-border">
                         <label class="form--labels" for="email">Email</label>
@@ -223,7 +224,6 @@
                             id="email"
                             name="email"
                             type="email"
-                            value='tom@g.com'
                             required/>
                     </div>
                 </fieldset>
@@ -244,8 +244,7 @@
                                     type="radio"
                                     name="rat"
                                     value="ratR"
-                                    id="ratR"
-                                    checked="true">
+                                    id="ratR">
                                 <label for="ratR">Regular </label>
                             </div>
                         </fieldset>
@@ -255,7 +254,7 @@
                             <label id="labelQuantity1" for="quantity1">
                                 Quantity: </label>
                             <input class="form--fields" type="number"
-                                name="quantity" value="2"
+                                name="quantity" value="0"
                                 id="quantity1" min="0" max="200" size="3ex">
                         </fieldset>
                     </fieldset>
