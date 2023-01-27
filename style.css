@@ -87,6 +87,9 @@ input, textarea {
     height: 1.5em;
 }
 
+.margin-0 {
+    margin: 0;
+}
 
 /* || ELEMENTS || */
 
@@ -238,7 +241,7 @@ h1 {
 
 
 
-/* Justify */
+/* FLEX */
 
 
 .row {
@@ -253,10 +256,17 @@ h1 {
     flex-wrap: wrap;
 }
 
+.align-center {
+    align-items: center;
+}
+
 .justify-center {
     justify-content: center;
 }
 
+.space-between {
+    justify-content: space-between;
+} 
 
 .space-around {
     justify-content: space-around;
