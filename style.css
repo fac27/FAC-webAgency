@@ -105,8 +105,6 @@ input, textarea {
     position: relative;
 }
 
-
-
     .nav--a::before {
         content: '';
         background-color: var(--primary-color);
@@ -118,13 +116,30 @@ input, textarea {
         z-index: -1;
         transition: all .3s ease-in-out;
     }
-
-
-
     .nav--a:hover::before {
         bottom: 0;
         height: 100%;
     }
+    
+    
+    .nav--a__hidden{
+        display: none;
+        float: left;
+    }
+
+.nav--ul{
+        margin-block-start: 0em;
+        padding-inline-start: 0em;
+    }
+.nav--li {
+    display: block;
+}
+
+.nav--submenu:hover{ background-color: var(--accent-color-1);}
+.nav--submenu:hover > ul {
+    display: block;
+}
+
 
 
 /* These classnames are JS variables */
@@ -226,7 +241,7 @@ h1 {
 
 .row {
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
 }
     .row__nogap {
         gap: 0rem;
@@ -241,8 +256,8 @@ h1 {
 }
 
 
-.space-between {
-    justify-content: space-between;
+.space-around {
+    justify-content: space-around;
 }
 
 
