@@ -82,7 +82,6 @@ html {
     }
 
 input, textarea {
-    color: var(--secondary-color);
     background-color: rgb(173, 166, 166);
     height: 1.5em;
 }
