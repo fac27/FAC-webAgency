@@ -42,7 +42,7 @@ function givePrice(event) {
 
     // change sidemenu values doesnt work if you submitted in mobile then use desktop, have to press submit on desktop
     // check sidemenu is visible/media
-    if (window.matchMedia('(min-width: 600px)').matches) {
+    if (window.matchMedia('(min-width: 700px)').matches) {
         // check which items are in basket (have a price)
         if (ratPrice != 0) {
             var span = document.getElementsByTagName('span')[0];
