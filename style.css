@@ -94,8 +94,10 @@ input, textarea {
 /* || ELEMENTS || */
 
 
+
 .fig--img {
     aspect-ratio: 1 / 1;
+    max-width: 20rem;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -260,6 +262,11 @@ h1 {
     align-items: center;
 }
 
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
 .justify-center {
     justify-content: center;
 }
@@ -341,12 +348,12 @@ h1 {
 
 
 /* || MEDIA QUERIES ||  */
-@media (min-width:600px) {
+@media (min-width:700px) {
     .grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-        row-gap: 1rem;
-    }
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+        gap: 1rem; 
+      }
 
         .form__grid_on-desktop {
             display: grid;
@@ -392,6 +399,7 @@ h1 {
     } */
 
 }
+
 
 
 /* || STYLES GRAVEYARD || */
