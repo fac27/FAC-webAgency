@@ -10,6 +10,7 @@
     --accent-color-1: #ffeaa5;
     --accent-color-2: #e3e3e3;
     --font-colour: #1a1b1c;
+    --form-colour: rgb(173, 166, 166);
 }
 
 
@@ -83,7 +84,7 @@ html {
 
 input, textarea {
     color: var(--secondary-color);
-    background-color: rgb(173, 166, 166);
+    background-color: var(--form-colour);
 }
 
 
