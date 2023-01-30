@@ -379,12 +379,7 @@ h1 {
         .form--grid__align-start {
             align-self: start;
         }
-
-    .form--header {
-        grid-area: header;
-        width: 15rem;
-    }
-
+        
     .form--main {
         grid-area: main;
         justify-self: end;

@@ -216,17 +216,19 @@
                         <label for="marketingConsent">Marketing Consent</label>
                     </div>
                     <div class="row space-between">
-                        <button class="form--submit" type="submit"> Submit </button>
-                        <button class="form--submit" type="button" onclick="toggleForms('quote', 'contact')"> Get quote</button>
+                        <button class="form--submit" type="submit"> Submit
+                        </button>
+                        <button class="form--submit" type="button"
+                            onclick="toggleForms('quote', 'contact')"> Get quote</button>
                     </div>
                 </div>
             </form>
         </section>
-        <section id="quote" class="center center--fit-content" style="display: block;">
+        <section id="quote" class="center center--fit-content" style="display:
+            block;">
             <h2 class="figure__title center_text">Quotes</h2>
-            <form id="contact" class="full-width card card--secondary
-                form__grid_on-desktop"
-                onsubmit="givePrice(event)">
+            <form id="quote-form" class="full-width card card--secondary
+                form__grid_on-desktop" onsubmit="(e) => {e.prevent.default()}">
                 <fieldset class="stack-sm center fieldset__no-border
                     form--main">
                     <fieldset class="stack-sm fieldset__round-corners">
@@ -234,7 +236,7 @@
                         <fieldset class="stack-md fieldset__no-border">
                             <div class="row align-center">
                                 <input
-                                    class="margin-0"
+                                    class="margin-0 qoute-input"
                                     type="radio"
                                     name="rat"
                                     value="ratM"
@@ -244,7 +246,7 @@
                             </div>
                             <div class="row align-center">
                                 <input
-                                    class="margin-0"
+                                    class="margin-0 qoute-input"
                                     type="radio"
                                     name="rat"
                                     value="ratR"
@@ -257,7 +259,8 @@
                             fieldset__no-border">
                             <label id="labelQuantity1" for="quantity1">
                                 Quantity: </label>
-                            <input class="form--fields" type="number"
+                            <input class="form--fields qoute-input"
+                                type="number"
                                 name="quantity" value="0"
                                 id="quantity1" min="0" max="200" size="3ex">
                         </fieldset>
@@ -267,7 +270,7 @@
                         <fieldset class="stack-md fieldset__no-border">
                             <div class="row align-center">
                                 <input
-                                    class="margin-0"
+                                    class="margin-0 qoute-input"
                                     type="radio"
                                     name="cock"
                                     value="cockM"
@@ -277,7 +280,7 @@
                             </div>
                             <div class="row align-center">
                                 <input
-                                    class="margin-0"
+                                    class="margin-0 qoute-input"
                                     type="radio"
                                     name="cock"
                                     value="cockR"
@@ -290,7 +293,8 @@
                             fieldset__no-border">
                             <label id="labelQuantity1" for="quantity2">
                                 Quantity: </label>
-                            <input class="form--fields" type="number"
+                            <input class="form--fields qoute-input"
+                                type="number"
                                 name="quantity" value="0"
                                 id="quantity2" min="0" max="200" size="3ex">
                         </fieldset>
@@ -302,7 +306,8 @@
                             fieldset__no-border">
                             <label id="labelQuantity1" for="quantity3"> Quantity
                                 (sqrFt): </label>
-                            <input class="form--fields" type="number"
+                            <input class="form--fields qoute-input"
+                                type="number"
                                 name="quantity" value="0"
                                 id="quantity3" min="0" max="200" size="3ex">
                         </fieldset>
@@ -332,10 +337,13 @@
                     <output name="output"> </output>
                 </fieldset>
                 <fieldset class="center fieldset__no-border form--sidebar
-                    form--grid__align-end full-width" >
+                    form--grid__align-end full-width">
                     <div class="row space-between">
-                        <button class="form--submit" type="submit"> Pay </button>
-                        <button class="form--submit" type="button" onclick="toggleForms('contact', 'quote')"> Contact Us </button>
+                        <button class="form--submit" type="submit" > Pay
+                        </button>
+                        <button class="form--submit" type="button"
+                            onclick="toggleForms('contact', 'quote')"> Contact
+                            Us </button>
                     </div>
                 </fieldset>
             </form>

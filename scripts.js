@@ -1,4 +1,10 @@
-//ensures the rats tab is displayed on render
+// event listener for any input changed wihtin quote form, trigger giveprice
+const quoteInputs = document.getElementsByClassName('qoute-input');
+for (element of quoteInputs) {
+    element.addEventListener("input", (event) => {console.log(event); givePrice(event)});
+};
+
+// ensures the rats tab is displayed on render
 document.getElementById("rats").style.display = "block"
 
 function openPest(evt, pestName) {
@@ -30,8 +36,7 @@ function givePrice(event) {
     // stops refresh
     event.preventDefault();
     // list of all elements in form 
-    var elements = event.target.elements;
-    console.log(elements.rat.value);
+    var elements = document.getElementById('quote-form');
     var ratPrice, cockPrice;
     // find whether they are mutants or regular rats/cockroaches and times that value by how many wer listed in number input
     elements.rat.value == 'ratR' ? ratPrice = elements.quantity1.value * 200 : ratPrice = elements.quantity1.value * 500
