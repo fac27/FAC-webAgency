@@ -149,6 +149,12 @@ input, textarea {
     display: block;
 }
 
+.nav--button--submenu {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 1em;
+    padding: 0.5em;
+}
 
 
 

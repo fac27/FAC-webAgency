@@ -55,6 +55,7 @@ function toggleExpanded(e){
        e.target.setAttribute("aria-expanded", expanded);
 }
 document.getElementById("btnSubmenu").addEventListener('focusout', (e) => {
+    //this ensures that the menu options are there to click
     setTimeout( () => {toggleExpanded(e)}, 200);
 });
 
