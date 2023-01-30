@@ -11,19 +11,24 @@
         <header>
             <nav class="full-width nav">
                 <ul class="nav--ul full-width row space-around">
-                    <li class="nav--li"><a class="nav--a" href="#home"> Home </a></li>
-                    <li class="nav--li"><a class="nav--a" href="#services"> Services</a></li>
-                    <li class="nav--li"><a class="nav--a" href="#about"> About Us</a></li>
+                    <li class="nav--li"><a class="nav--a" href="#home"> Home
+                        </a></li>
+                    <li class="nav--li"><a class="nav--a" href="#services">
+                            Services</a></li>
+                    <li class="nav--li"><a class="nav--a" href="#about"> About
+                            Us</a></li>
                     <li class="nav--li nav--submenu"><a class="nav--a" href="">Contact</a>
-                      <ul class="nav--a__hidden nav--ul">
-                        <li class="nav--li"><a class="nav--a" href="#quote" onclick="toggleForms('quote','contact')"> Quote</a></li>
-                        <li class="nav--li"><a class="nav--a" href="#contact" onclick="toggleForms('contact', 'quote')"> Contact</a> </li>
-                      </ul> 
+                        <ul class="nav--a__hidden nav--ul">
+                            <li class="nav--li"><a class="nav--a" href="#quote"
+                                    onclick="toggleForms('quote','contact')">
+                                    Quote</a></li>
+                            <li class="nav--li"><a class="nav--a"
+                                    href="#contact"
+                                    onclick="toggleForms('contact', 'quote')">
+                                    Contact</a> </li>
+                        </ul>
                     </li>
-                    
-                    
                 </ul>
-                
             </nav>
             <img class="center center-lg" src="images/logo.png" alt="TheBug
                 Fixers">
@@ -99,7 +104,7 @@
         <section class="stack-lg">
             <h2 class="center_text" id="about">Meet The Team</h2>
             <container class="grid">
-                <figure class="card card--shadow column">
+                <figure class="card card--shadow column align-center">
                     <img class="full-width fig--img"
                         src="images/JohnSmith.png" alt="A grizzled older black
                         man smoking a cigar and wearing a blue collared
@@ -116,32 +121,35 @@
                         threaten us all.
                     </figcaption>
                 </figure>
-                <figure class="card card--shadow column">
+                <figure class="card card--shadow column align-center">
+                    >>>>>>> main
                     <img class="full-width fig--img"
                         src="images/TahaHassan.png" alt="A person in a hazard
                         suit in a kitchen, there is a large flying
                         insect in front of him.">
                     <h3> Taha Hassan </h3>
-                    <figcaption> Taha Hassan was training to be a web developer when
+                    <figcaption> Taha Hassan was training to be a web developer
+                        when
                         the Great Pestilence struck. And now spends his days
                         valiantly fighting
                         supernaturally-enhanced vermin.
                     </figcaption>
                 </figure>
-                <figure class="card card--shadow column">
+                <figure class="card card--shadow column align-center">
                     <img class="full-width fig--img"
                         src="images/TomasFreeman.png" alt="a person in a green
                         hazard suit in a kitchen holding what looks like
                         a fire extinguisher, there is a large insect
                         flying in front of him.">
                     <h3> Tom Freeman </h3>
-                    <figcaption> Taha Hassan was training to be a web developer when
+                    <figcaption> Taha Hassan was training to be a web developer
+                        when
                         the Great Pestilence struck. And now spends his days
                         valiantly fighting
                         supernaturally-enhanced vermin.
                     </figcaption>
                 </figure>
-                <figure class="card card--shadow column">
+                <figure class="card card--shadow column align-center">
                     <img class="full-width fig--img"
                         src="images/SarahJohnson.png" alt="An older woman with
                         light brown hair and glasses wearing a lab coat.
@@ -156,7 +164,7 @@
                         joined The Bug Fixers after
                         completing her PhD in Entomology.</figcaption>
                 </figure>
-                <figure class="card card--shadow column">
+                <figure class="card card--shadow column align-center">
                     <img class="full-width fig--img"
                         src="images/MichelleBrown.png" alt="A woman with long,
                         dark hair and glasses. She's wearing a blue
@@ -182,23 +190,26 @@
             <h2 class="figure__title center_text">Contact Us</h2>
             <form class="stack-md full-width card card--secondary">
                 <div class="stack-xs center">
-                    <label class="form--labels" for="name">Name</label>
-                    <input class="form--fields full-width" id="name" name="name"
+                    <label class="form--labels" for="nameC">Name</label>
+                    <input class="form--fields full-width" id="nameC"
+                        name="nameC"
                         type="text" required/>
                 </div>
                 <div class="stack-xs center">
-                    <label class="form--labels" for="email">Email</label>
-                    <input class="form--fields full-width" id="email" name="email"
+                    <label class="form--labels" for="emailC">Email</label>
+                    <input class="form--fields full-width" id="emailC"
+                        name="emailC"
                         type="email"
                         required/>
                 </div>
                 <div class="stack-xs center">
                     <label class="form--labels" for="message">Message</label>
-                    <textarea class="form--fields full-width" id="message" name="message"
+                    <textarea class="form--fields full-width" id="message"
+                        name="message"
                         type="textarea" required></textarea>
                 </div>
                 <div class="stack-md center">
-                    
+
                     <div>
                         <input type="checkbox" name="marketingConsent"
                             id="marketingConsent">
@@ -210,22 +221,47 @@
         </section>
         <section id="quote" class="center center-lg" style="display: none;">
             <h2 class="figure__title center_text">Quotes</h2>
-            <form id="contact" class="full-width card card--secondary"
+            <form id="contact" class="full-width card card--secondary
+                form__grid_on-desktop"
                 onsubmit="givePrice(event)">
-                <fieldset class="stack-sm center fieldset__no-border">
+                <fieldset class="stack-md form--header fieldset__no-border">
+                    <div class="stack-xs center fieldset__no-border">
+                        <label class="form--labels" for="nameQ">Name</label>
+                        <input
+                            class="form--fields full-width"
+                            id="nameQ"
+                            name="nameQ"
+                            type="text"
+                            required/>
+                    </div>
+                    <div class="stack-xs center fieldset__no-border">
+                        <label class="form--labels" for="emailQ">Email</label>
+                        <input
+                            class="form--fields full-width"
+                            id="emailQ"
+                            name="emailQ"
+                            type="email"
+                            required/>
+                    </div>
+                </fieldset>
+                <fieldset class="stack-sm center fieldset__no-border
+                    form--main">
                     <fieldset class="stack-sm fieldset__round-corners">
                         <legend> Rats </legend>
-                        <fieldset class="row fieldset__no-border row__wrap">
-                            <div>
+                        <fieldset class="stack-md fieldset__no-border">
+                            <div class="row align-center">
                                 <input
+                                    class="margin-0"
                                     type="radio"
                                     name="rat"
                                     value="ratM"
+                                    checked="true"
                                     id="ratM">
                                 <label for="ratM"> Mutant</label>
                             </div>
-                            <div>
+                            <div class="row align-center">
                                 <input
+                                    class="margin-0"
                                     type="radio"
                                     name="rat"
                                     value="ratR"
@@ -234,7 +270,7 @@
                             </div>
                         </fieldset>
                         <fieldset id="quantityField" class="row
-                            justify-start
+                            space-between
                             fieldset__no-border">
                             <label id="labelQuantity1" for="quantity1">
                                 Quantity: </label>
@@ -245,17 +281,20 @@
                     </fieldset>
                     <fieldset class="stack-sm fieldset__round-corners">
                         <legend> Cockroaches </legend>
-                        <fieldset class="row fieldset__no-border row__wrap">
-                            <div>
+                        <fieldset class="stack-md fieldset__no-border">
+                            <div class="row align-center">
                                 <input
+                                    class="margin-0"
                                     type="radio"
                                     name="cock"
                                     value="cockM"
+                                    checked="true"
                                     id="cockM">
                                 <label for="CockM">Mutant</label>
                             </div>
-                            <div>
+                            <div class="row align-center">
                                 <input
+                                    class="margin-0"
                                     type="radio"
                                     name="cock"
                                     value="cockR"
@@ -264,7 +303,7 @@
                             </div>
                         </fieldset>
                         <fieldset id="quantityField" class="row
-                            justify-start
+                            space-between
                             fieldset__no-border">
                             <label id="labelQuantity1" for="quantity2">
                                 Quantity: </label>
@@ -276,7 +315,7 @@
                     <fieldset class="stack-sm fieldset__round-corners">
                         <legend> Oooze </legend>
                         <fieldset id="quantityField" class="row
-                            justify-start
+                            space-between
                             fieldset__no-border">
                             <label id="labelQuantity1" for="quantity3"> Quantity
                                 (sqrFt): </label>
@@ -286,9 +325,32 @@
                         </fieldset>
                     </fieldset>
                 </fieldset>
-                <fieldset class="center fieldset__no-border">
+                <fieldset class="center fieldset__no-border form--sidebar
+                    form--grid__align-start">
+                    <span class="quote--sum" style="display: none;">
+                        <!-- avoiding creating elements repeatedly -->
+                        <p> </p>
+                        <p> </p>
+                        <p> </p>
+                        <hr>
+                    </span>
+                    <span class="quote--sum" style="display: none;">
+                        <p> </p>
+                        <p> </p>
+                        <p> </p>
+                        <hr>
+                    </span>
+                    <span class="quote--sum" style="display: none;">
+                        <p> </p>
+                        <p> </p>
+                        <p> </p>
+                        <hr>
+                    </span>
+                    <output name="output"> </output>
+                </fieldset>
+                <fieldset class="center fieldset__no-border form--sidebar
+                    form--grid__align-end">
                     <button class="form--submit" type="submit">Price</button>
-                    <p style="display: none;"> = </p>
                     <output name="output"> </output>
                 </fieldset>
             </form>
