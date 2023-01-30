@@ -1,7 +1,7 @@
 // event listener for any input changed wihtin quote form, trigger giveprice
 const quoteInputs = document.getElementsByClassName('qoute-input');
 for (element of quoteInputs) {
-    element.addEventListener("input", (event) => {console.log(event); givePrice(event)});
+    element.addEventListener("input", (event) => givePrice(event));
 };
 
 // ensures the rats tab is displayed on render
