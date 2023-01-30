@@ -24,7 +24,7 @@ We have maintained a mobile first approach so there is expected deformation when
 
 ## Next steps
 
-We're going to add sections on services and pricing and a photo gallery. We're also going to develop the desktop version of the site.
+We're going to finalise styling on the desktop version of the site. Add keyboard navigation to the navbar submenus. And perhaps add some animations to the webpage.
 
 ## Instructions
 

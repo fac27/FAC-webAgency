@@ -10,6 +10,7 @@
     --accent-color-1: #ffeaa5;
     --accent-color-2: #e3e3e3;
     --font-colour: #1a1b1c;
+    --form-colour: rgb(173, 166, 166);
 }
 
 
@@ -83,15 +84,20 @@ html {
 
 input, textarea {
     color: var(--secondary-color);
-    background-color: rgb(173, 166, 166);
+    background-color: var(--form-colour);
+    height: 1.5em;
 }
 
+.margin-0 {
+    margin: 0;
+}
 
 /* || ELEMENTS || */
 
 
 
 .fig--img {
+    aspect-ratio: 1 / 1;
     max-width: 20rem;
     border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -252,7 +258,7 @@ h1 {
 
 
 
-/* Justify */
+/* FLEX */
 
 
 .row {
@@ -267,16 +273,22 @@ h1 {
     flex-wrap: wrap;
 }
 
+.align-center {
+    align-items: center;
+}
+
 .column {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .justify-center {
     justify-content: center;
 }
 
+.space-between {
+    justify-content: space-between;
+} 
 
 .space-around {
     justify-content: space-around;
@@ -311,11 +323,13 @@ h1 {
     margin-left: auto;
 }
 
+.center--fit-content {
+    max-width: fit-content;
+}
 
 .center-lg {
     max-width: 20rem;
 }
-
 
 .center-sm {
     max-width: 10rem;
@@ -349,13 +363,54 @@ h1 {
     margin-top: 4rem;
 }
 
-@media only screen and (min-width: 700px) {
+
+/* || MEDIA QUERIES ||  */
+@media (min-width:700px) {
     .grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
         gap: 1rem; 
       }
+
+        .form__grid_on-desktop {
+            display: grid;
+            justify-items: end;
+            align-items: center;
+            grid-template-columns: 15rem 15rem;
+            grid-template-rows: min-content min-content;
+            grid-template-areas: 
+                "main sidebar";
+        }
+
+        .form__grid_on-desktop > * {
+            margin: 0%;
+        }
+
+        .form--grid__align-end {
+            align-self: end;
+        }
+
+        .form--grid__align-start {
+            align-self: start;
+        }
+        
+    .form--main {
+        grid-area: main;
+        justify-self: end;
+    }
+
+    .form--sidebar {
+        grid-area: sidebar;
+        justify-self: start;
+    }
+
+    /* .card--article__inline {
+        display: inline;
+    } */
+
 }
+
+
 
 /* || STYLES GRAVEYARD || */
 
