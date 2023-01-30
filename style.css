@@ -10,6 +10,7 @@
     --accent-color-1: #ffeaa5;
     --accent-color-2: #e3e3e3;
     --font-colour: #1a1b1c;
+    --form-colour: rgb(173, 166, 166);
 }
 
 
@@ -82,7 +83,8 @@ html {
     }
 
 input, textarea {
-    background-color: rgb(173, 166, 166);
+    color: var(--secondary-color);
+    background-color: var(--form-colour);
     height: 1.5em;
 }
 
@@ -307,11 +309,13 @@ h1 {
     margin-left: auto;
 }
 
+.center--fit-content {
+    max-width: fit-content;
+}
 
 .center-lg {
     max-width: 20rem;
 }
-
 
 .center-sm {
     max-width: 10rem;
@@ -358,11 +362,9 @@ h1 {
             display: grid;
             justify-items: end;
             align-items: center;
-            padding-inline: 20%;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 15rem 15rem;
             grid-template-rows: min-content min-content;
             grid-template-areas: 
-                "header ."
                 "main sidebar";
         }
 
@@ -377,12 +379,7 @@ h1 {
         .form--grid__align-start {
             align-self: start;
         }
-
-    .form--header {
-        grid-area: header;
-        width: 15rem;
-    }
-
+        
     .form--main {
         grid-area: main;
         justify-self: end;
