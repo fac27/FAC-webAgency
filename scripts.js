@@ -37,6 +37,27 @@ function givePrice(event) {
     document.getElementsByTagName('output')[0].value = '= £' + quantity;
 };
 
+function toggleForms(show, hide) {
+    document.getElementById(show).style.display = 'block';
+    document.getElementById(hide).style.display = 'none';
+}
+
+document.getElementById("btnSubmenu").addEventListener("click", toggleExpanded);
+
+function toggleExpanded(e){
+       //hides and shows submenu in navbar
+       const subMenu = document.getElementById("id_submenu");
+       subMenu.classList.toggle("hide");
+       //toggles aria-expanded attribute for screenreaders
+       var expanded = e.target.getAttribute("aria-expanded"); 
+       if (expanded == "true"){expanded = "false"} 
+       else {expanded = "true"}
+       e.target.setAttribute("aria-expanded", expanded);
+}
+document.getElementById("btnSubmenu").addEventListener('focusout', (e) => {
+    setTimeout( () => {toggleExpanded(e)}, 200);
+});
+
 // function askForQuantity(pest) {
 //     document.getElementById('quantityField').style.display = 'flex';
 //     // check if quantity field isnt showing 
@@ -45,7 +66,3 @@ function givePrice(event) {
 //     document.getElementById("rats").style.display = "block";
 // }
 
-function toggleForms(show, hide) {
-    document.getElementById(show).style.display = 'block';
-    document.getElementById(hide).style.display = 'none';
-}

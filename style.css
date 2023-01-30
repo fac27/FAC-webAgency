@@ -123,10 +123,22 @@ input, textarea {
         height: 100%;
     }
     
+    .nav--a__hidden {
+        background-color: var(--accent-color-1);
+        border: 1px solid var(--primary-color);
+        border-top-width: 5px;
+        border-radius: 0 0 4px 4px;
+        list-style-type: none;
+        padding: 0.5rem;
+        position: absolute;
+}
+      .nav--a__hidden > li:hover {
+        background-color: var(--primary-color);
+      }
     
-    .nav--a__hidden{
+    
+    .hide{
         display: none;
-        float: left;
     }
 
 .nav--ul{
@@ -137,10 +149,6 @@ input, textarea {
     display: block;
 }
 
-.nav--submenu:hover{ background-color: var(--accent-color-1);}
-.nav--submenu:hover > ul {
-    display: block;
-}
 
 
 

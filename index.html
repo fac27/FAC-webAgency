@@ -9,13 +9,18 @@
     </head>
     <body class="stack-xl">
         <header>
-            <nav class="full-width nav">
+            <nav class="full-width nav" aria-label="The Bug Fixers">
                 <ul class="nav--ul full-width row space-around">
                     <li class="nav--li"><a class="nav--a" href="#home"> Home </a></li>
                     <li class="nav--li"><a class="nav--a" href="#services"> Services</a></li>
                     <li class="nav--li"><a class="nav--a" href="#about"> About Us</a></li>
-                    <li class="nav--li nav--submenu"><a class="nav--a" href="">Contact</a>
-                      <ul class="nav--a__hidden nav--ul">
+                    <li class="nav--li nav--submenu">
+                        <button class="nav--button--submenu"
+                        id="btnSubmenu" 
+                        aria-expanded="false" 
+                        aria-controls="id_submenu">
+                        Contact</button>
+                      <ul class="nav--a__hidden nav--ul stack-sm hide" id="id_submenu">
                         <li class="nav--li"><a class="nav--a" href="#quote" onclick="toggleForms('quote','contact')"> Quote</a></li>
                         <li class="nav--li"><a class="nav--a" href="#contact" onclick="toggleForms('contact', 'quote')"> Contact</a> </li>
                       </ul> 
