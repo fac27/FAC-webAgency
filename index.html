@@ -215,11 +215,14 @@
                             id="marketingConsent">
                         <label for="marketingConsent">Marketing Consent</label>
                     </div>
-                    <button class="form--submit" type="submit">Submit</button>
+                    <div class="row space-between">
+                        <button class="form--submit" type="submit"> Submit </button>
+                        <button class="form--submit" type="button" onclick="toggleForms('quote', 'contact')"> Get quote</button>
+                    </div>
                 </div>
             </form>
         </section>
-        <section id="quote" class="center center-lg" style="display: none;">
+        <section id="quote" class="center center--fit-content" style="display: block;">
             <h2 class="figure__title center_text">Quotes</h2>
             <form id="contact" class="full-width card card--secondary
                 form__grid_on-desktop"
@@ -329,9 +332,11 @@
                     <output name="output"> </output>
                 </fieldset>
                 <fieldset class="center fieldset__no-border form--sidebar
-                    form--grid__align-end">
-                    <button class="form--submit" type="submit">Price</button>
-                    <output name="output"> </output>
+                    form--grid__align-end full-width" >
+                    <div class="row space-between">
+                        <button class="form--submit" type="submit"> Pay </button>
+                        <button class="form--submit" type="button" onclick="toggleForms('contact', 'quote')"> Contact Us </button>
+                    </div>
                 </fieldset>
             </form>
         </section>

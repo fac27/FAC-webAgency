@@ -309,11 +309,13 @@ h1 {
     margin-left: auto;
 }
 
+.center--fit-content {
+    max-width: fit-content;
+}
 
 .center-lg {
     max-width: 20rem;
 }
-
 
 .center-sm {
     max-width: 10rem;
@@ -360,11 +362,9 @@ h1 {
             display: grid;
             justify-items: end;
             align-items: center;
-            padding-inline: 20%;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 15rem 15rem;
             grid-template-rows: min-content min-content;
             grid-template-areas: 
-                "header ."
                 "main sidebar";
         }
 
