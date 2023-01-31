@@ -141,7 +141,8 @@ input, textarea {
         padding: 0.5rem;
         position: absolute;
         top: 2rem;
-      }
+    }
+
 
 .nav--ul{
         margin-block-start: 0em;
@@ -157,6 +158,7 @@ input, textarea {
 .nav--submenu:hover > ul {
     display: block;
 }
+
 
 .nav--button {
     background-color: var(--accent-color-1);
@@ -197,7 +199,41 @@ input, textarea {
     }
 
 
+/* || FORM primitives | */
 
+#output {
+    display: block;
+    position: relative;
+    left: 0px;
+    bottom: 0px;
+}
+
+.quote--sum, output {
+    width: 13rem;
+    margin: 1em;
+}
+
+
+#basket {
+    z-index: 1;
+}
+
+#basket::before {
+    content: '';
+    box-sizing: border-box;
+    display: block;
+    margin: 0.6em;
+    z-index: -1;
+    left: 0em;
+    transform: translateX(50vw);
+    position: absolute;
+    background: rgb(255, 255, 255);
+}
+
+#basket, #basket::before {
+    width: 13.8rem;
+    height: 24.2rem;
+}
 
 .form--submit {
     background-color: var(--primary-color);
@@ -244,6 +280,10 @@ input, textarea {
 .fieldset__round-corners {
     border-radius: 1rem;
 }
+
+
+
+
 /* || TYPOGRAPHY || */
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
@@ -408,7 +448,7 @@ h1 {
 
     .form--sidebar {
         grid-area: sidebar;
-        justify-self: start;
+        justify-self: center;
     }
 
     /* .card--article__inline {
