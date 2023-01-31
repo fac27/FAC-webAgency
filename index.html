@@ -16,17 +16,21 @@
                     <li class="nav--li"><a class="nav--a" href="#about"> AboutUs</a></li>
                     <li class="nav--li nav--submenu">
                         <button type="button"
-                        id="btnSubmenu"
-                        class="nav--button"
-                        aria-expanded="true"
-                        aria-controls="id_submenu">Contact ˅</a>
+                            id="btnSubmenu"
+                            class="nav--button"
+                            aria-expanded="true"
+                            aria-controls="id_submenu">Contact ˅</a>
                         <ul class="nav--a__hidden stack-sm hide"
                             id="id_submenu">
                             <li class="nav--li">
-                            <a class="nav--a quoteContact" id="quoteContact" href="#quote" onclick="toggleForms('quote','contact')">Quote</a>
+                                <a class="nav--a quoteContact" id="quoteContact"
+                                    href="#quote"
+                                    onclick="toggleForms('quote','contact')">Quote</a>
                             </li>
                             <li class="nav--li">
-                            <a class="nav--a quoteContact" id="quoteContact2" href="#contact" onclick="toggleForms('contact', 'quote')">Contact</a> 
+                                <a class="nav--a quoteContact"
+                                    id="quoteContact2" href="#contact"
+                                    onclick="toggleForms('contact', 'quote')">Contact</a>
                             </li>
                         </ul>
                     </li>
@@ -186,23 +190,28 @@
 
         <section id="contact" class="center center-lg" style="display: block;">
             <h2 class="figure__title center_text">Contact Us</h2>
-            <form class="stack-md full-width card card--secondary" onsubmit="(e) => {e.prevent.default()}">
+            <form class="stack-md full-width card card--secondary"
+                onsubmit="(e)=>
+                {e.prevent.default()}">
                 <div class="stack-xs center">
                     <label class="form--labels" for="nameC">Name</label>
-                    <input class="form--fields full-width" id="nameC" placeholder="Name"
+                    <input class="form--fields full-width" id="nameC"
+                        placeholder="Name"
                         name="nameC"
                         type="text" required/>
                 </div>
                 <div class="stack-xs center">
                     <label class="form--labels" for="emailC">Email</label>
-                    <input class="form--fields full-width" id="emailC" placeholder="Email"
+                    <input class="form--fields full-width" id="emailC"
+                        placeholder="Email"
                         name="emailC"
                         type="email"
                         required/>
                 </div>
                 <div class="stack-xs center">
                     <label class="form--labels" for="message">Message</label>
-                    <textarea class="form--fields full-width" id="message" placeholder="Message"
+                    <textarea class="form--fields full-width" id="message"
+                        placeholder="Message"
                         name="message"
                         type="textarea" required></textarea>
                 </div>
@@ -226,7 +235,7 @@
             none;">
             <h2 class="figure__title center_text">Quotes</h2>
             <form id="quote-form" class="full-width card card--secondary
-                form__grid_on-desktop" onsubmit="(e) => {e.prevent.default()}">
+                form__grid_on-desktop" onsubmit="(e)=> {e.prevent.default()}">
                 <fieldset class="stack-sm center fieldset__no-border
                     form--main">
                     <fieldset class="stack-sm fieldset__round-corners">
@@ -311,7 +320,8 @@
                         </fieldset>
                     </fieldset>
                 </fieldset>
-                <fieldset id="basket" class="center fieldset__no-border form--sidebar
+                <fieldset id="basket" class="center fieldset__no-border
+                    form--sidebar
                     form--grid__align-start">
                     <span class="quote--sum" style="display: none;">
                         <!-- avoiding creating elements repeatedly -->
@@ -337,7 +347,7 @@
                 <fieldset class="center fieldset__no-border form--sidebar
                     form--grid__align-end full-width">
                     <div class="row space-between">
-                        <button class="form--submit" type="submit" > Pay
+                        <button class="form--submit" type="submit"> Pay
                         </button>
                         <button class="form--submit" type="button"
                             onclick="toggleForms('contact', 'quote')"> Contact
@@ -349,7 +359,7 @@
         <footer></footer>
         <script src="scripts.js"></script>
         <script type='text/javascript' src='./bugs/bug-min.js'></script>
-		<script type='text/javascript'>
+        <script type='text/javascript'>
 			// controls how many bugs spawn on the screen:
 			new BugController({'minBugs': 3, 'maxBugs': 6});			
 		</script>
