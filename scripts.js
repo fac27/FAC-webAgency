@@ -4,6 +4,9 @@ for (element of quoteInputs) {
     element.addEventListener("input", (event) => givePrice(event));
 };
 
+const requiredFields = document.querySelectorAll('input:required');
+console.log(requiredFields)
+
 // ensures the rats tab is displayed on render
 document.getElementById("rats").style.display = "block"
 
