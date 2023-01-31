@@ -132,8 +132,16 @@ input, textarea {
     
     .nav--a__hidden{
         display: none;
-        float: left;
-    }
+        background-color: var(--accent-color-1);
+        border: 1px solid var(--primary-color);
+        border-top-width: 5px;
+        border-radius: 0 0 4px 4px;
+        display: block;
+        list-style-type: none;
+        padding: 0.5rem;
+        position: absolute;
+        top: 2rem;
+      }
 
 .nav--ul{
         margin-block-start: 0em;
@@ -142,13 +150,22 @@ input, textarea {
 .nav--li {
     display: block;
 }
-
+.hide{
+    display: none;
+}
 .nav--submenu:hover{ background-color: var(--accent-color-1);}
 .nav--submenu:hover > ul {
     display: block;
 }
 
-
+.nav--button {
+    background-color: var(--accent-color-1);
+    border-radius: 1em;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -ms-border-radius: 1em;
+    -o-border-radius: 1em;
+}
 
 /* These classnames are JS variables */
 .tab--content {
@@ -182,7 +199,6 @@ input, textarea {
 
 
 
-
 .form--submit {
     background-color: var(--primary-color);
     margin-top: 0.5rem;
@@ -190,7 +206,12 @@ input, textarea {
     border-radius: 1em;
     padding: 0.5em;
     padding-inline: 1em;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -ms-border-radius: 1em;
+    -o-border-radius: 1em;
 }
+
 
     .form--submit:hover {
         background-color: rgb(63, 164, 63);

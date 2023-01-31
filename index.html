@@ -11,21 +11,23 @@
         <header>
             <nav class="full-width nav">
                 <ul class="nav--ul full-width row space-around">
-                    <li class="nav--li"><a class="nav--a" href="#home"> Home
-                        </a></li>
-                    <li class="nav--li"><a class="nav--a" href="#services">
-                            Services</a></li>
-                    <li class="nav--li"><a class="nav--a" href="#about"> About
-                            Us</a></li>
-                    <li class="nav--li nav--submenu"><a class="nav--a" href="">Contact</a>
-                        <ul class="nav--a__hidden nav--ul">
-                            <li class="nav--li"><a class="nav--a" href="#quote"
-                                    onclick="toggleForms('quote','contact')">
-                                    Quote</a></li>
-                            <li class="nav--li"><a class="nav--a"
-                                    href="#contact"
-                                    onclick="toggleForms('contact', 'quote')">
-                                    Contact</a> </li>
+                    <li class="nav--li"><a class="nav--a" href="#home"> Home</a></li>
+                    <li class="nav--li"><a class="nav--a" href="#services">Services</a></li>
+                    <li class="nav--li"><a class="nav--a" href="#about"> AboutUs</a></li>
+                    <li class="nav--li nav--submenu">
+                        <button type="button"
+                        id="btnSubmenu"
+                        class="nav--button"
+                        aria-expanded="true"
+                        aria-controls="id_submenu">Contact ˅</a>
+                        <ul class="nav--a__hidden stack-sm hide"
+                            id="id_submenu">
+                            <li class="nav--li">
+                            <a class="nav--a quoteContact" id="quoteContact" href="#quote" onclick="toggleForms('quote','contact')">Quote</a>
+                            </li>
+                            <li class="nav--li">
+                            <a class="nav--a quoteContact" id="quoteContact2" href="#contact" onclick="toggleForms('contact', 'quote')">Contact</a> 
+                            </li>
                         </ul>
                     </li>
                 </ul>
