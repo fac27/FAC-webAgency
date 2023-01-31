@@ -48,11 +48,16 @@ function givePrice(event) {
     var quantity = ratPrice + cockPrice + oozePrice;
     // change sidemenu values doesnt work if you submitted in mobile then use desktop, have to press submit on desktop
     // check sidemenu is visible/media
-    const result = (quantity) => { document.getElementsByTagName('output')[0].innerText = 'TOTAL = £' + quantity; };
+    const result = (quantity) => {
+        let output = document.getElementsByTagName('output')[0].innerText;
+        quantity == 0 ? document.getElementsByTagName('output')[0].innerText = '' : document.getElementsByTagName('output')[0].innerText = 'TOTAL = £' + quantity; 
+    };
+    const reset = (span) => {for (let element of span.children) element.innerHTML = ''; span.style.display = "none";};
+    if (quantity == 0) {document.getElementsByTagName('output')[0].innerText = ''; console.log(document.getElementsByTagName('output')[0])}
     if (!window.matchMedia('(min-width: 700px)').matches) return result(quantity);
     ['rat', 'cock'].forEach((insect, index) => {
         var span = document.getElementsByTagName('span')[index];
-        if (eval(insect + 'Price') == 0) {for (let element of span.children) element.innerHTML = ''; span.style.display = "none"; return;};
+        if (eval(insect + 'Price') == 0) {reset(span); return result(quantity);};
         span.style.display = 'block';
         var name = 'Rats';
         var type = 'Regular';
@@ -65,15 +70,12 @@ function givePrice(event) {
         span.children[1].innerHTML = `${individualPrice} x ${elements[quantityElement].value}`;
         span.children[2].innerHTML = `= £ ${total}`
     });
-    if (oozePrice != 0) {
-        var span = document.getElementsByTagName('span')[2];
-        // make visible
-        span.style.display = 'block';
-        span.children[0].innerHTML = 'Ooze'
-        span.children[1].innerHTML = `£3000 x ${elements.quantity3.value}`;
-        span.children[2].innerHTML = '= £' + oozePrice;
-    };
-    if (quantity == 0) {document.getElementsByTagName('output')[0].innerText = ' '; console.log(document.getElementsByTagName('output')[0])}
+    span = document.getElementsByTagName('span')[2];
+    if (oozePrice == 0) {reset(span); return result(quantity);};
+    span.style.display = 'block';
+    span.children[0].innerHTML = 'Ooze'
+    span.children[1].innerHTML = `£3000 x ${elements.quantity3.value}`;
+    span.children[2].innerHTML = '= £' + oozePrice;
     return result(quantity);
 }
 

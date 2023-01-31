@@ -206,6 +206,7 @@ input, textarea {
     position: relative;
     left: 0px;
     bottom: 0px;
+    margin-top: -0.5em;
 }
 
 .quote--sum, output {
