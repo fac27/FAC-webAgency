@@ -273,6 +273,14 @@ input, textarea {
     border-radius: 0.4rem;
 }
 
+    .form--fields:focus {
+        -webkit-box-shadow: 0 0 10px rgb(0, 0, 0);
+        box-shadow: 0 0 10px rgb(19, 19, 19);
+        animation: skew-x-shakeng 1s linear;
+    }
+
+
+
 .fieldset__no-border {
     border: none;
 }
@@ -457,7 +465,17 @@ h1 {
 
 }
 
+/* || KEYFRAMNES || */
 
+
+@keyframes skew-x-shakeng{
+ 0% { transform: skewX(-15deg); }
+ 5% { transform: skewX(15deg); }
+ 10% { transform: skewX(-15deg); }
+ 15% { transform: skewX(15deg); }
+ 20% { transform: skewX(0deg); }
+ 100% { transform: skewX(0deg); }
+}
 
 /* || STYLES GRAVEYARD || */
 
