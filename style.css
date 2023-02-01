@@ -223,17 +223,17 @@ input, textarea {
     content: '';
     box-sizing: border-box;
     display: block;
-    margin: 0.6em;
+    margin-top: 0.6em;
     z-index: -1;
     left: 0em;
     transform: translateX(50vw);
     position: absolute;
-    background: rgb(255, 255, 255);
+    background: var(--form-colour);
 }
 
 #basket, #basket::before {
-    width: 13.8rem;
-    height: 24.2rem;
+    width: 14rem;
+    height: 24.4rem;
 }
 
 .form--submit {
@@ -481,7 +481,7 @@ h1 {
         --accent-color-1: #634a31;
         --accent-color-2: #e3e3e3;
         --font-colour: whitesmoke;
-        --form-colour: #9FA4A9;
+        --form-colour: #595c5e;
 }
     button{
         color: whitesmoke;
