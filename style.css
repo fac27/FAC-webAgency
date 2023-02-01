@@ -6,9 +6,11 @@
 :root {
     --background-color: #b0f4aa;
     --primary-color: #e4bb7d;
+    --tab--color: #eeda98;
     --secondary-color: #ecffe6;
     --accent-color-1: #ffeaa5;
     --accent-color-2: #e3e3e3;
+    --nav--a--color: #18272F;
     --font-colour: #1a1b1c;
     --form-colour: rgb(173, 166, 166);
 }
@@ -109,7 +111,7 @@ input, textarea {
 
 .nav--a {
     text-decoration: none;
-    color: #18272F;
+    color: var(--nav--a--color);
     font-weight: 600;
     position: relative;
 }
@@ -155,10 +157,7 @@ input, textarea {
 .hide{
     display: none;
 }
-.nav--submenu:hover{ background-color: var(--accent-color-1);}
-.nav--submenu:hover > ul {
-    display: block;
-}
+
 
 
 .nav--button {
@@ -174,14 +173,14 @@ input, textarea {
 .tab--content {
     /*styles the info on services section */
     display: none;
-    background-color: #eeda98;
+    background-color: var(--tab--color);
     padding: 1rem;
     border: 1px solid rgba(0, 0, 0, 0.13);
     border-top: none;
     }
     .tab--button {
     /*styles the buttons on the services section */
-        background-color: #eeda98;
+        background-color: var(--tab--color);
         border: none;
         padding: 0.5rem;
         outline: none;
@@ -385,7 +384,11 @@ h1 {
 }
 
 .center-lg {
-    max-width: 20rem;
+    max-width: 30rem;
+}
+
+.center-xl {
+    max-width: 40rem;
 }
 
 .center-sm {
@@ -465,22 +468,20 @@ h1 {
 
 @media screen and (prefers-color-scheme: dark) {           
     :root {
-        --background-color: #b0f4aa;
-        --primary-color: #e4bb7d;
-        --secondary-color: #ecffe6;
-        --accent-color-1: #ffeaa5;
+        --background-color: #000411;
+        --primary-color: #0d0718;
+        --tab--color: #533f2c;
+        --secondary-color: #060d1a;
+        --nav--a--color: whitesmoke;
+        --accent-color-1: #634a31;
         --accent-color-2: #e3e3e3;
-        --font-colour: #1a1b1c;
-        --form-colour: rgb(173, 166, 166);
-        filter: invert(1);
+        --font-colour: whitesmoke;
+        --form-colour: #9FA4A9;
+}
+    button{
+        color: whitesmoke;
     }
-
-    img {
-        filter: invert(1); 
-    }
-  }
-
-
+}
   /* || KEYFRAMNES || */
 
 
