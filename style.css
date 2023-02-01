@@ -43,6 +43,7 @@ html {
 
 .nav {
     position: fixed;
+    z-index: 10;
     align-items: center;
     width: 100%;
     padding-top: 0.7rem;
@@ -459,14 +460,28 @@ h1 {
         grid-area: sidebar;
         justify-self: center;
     }
-
-    /* .card--article__inline {
-        display: inline;
-    } */
-
 }
 
-/* || KEYFRAMNES || */
+
+@media screen and (prefers-color-scheme: dark) {           
+    :root {
+        --background-color: #b0f4aa;
+        --primary-color: #e4bb7d;
+        --secondary-color: #ecffe6;
+        --accent-color-1: #ffeaa5;
+        --accent-color-2: #e3e3e3;
+        --font-colour: #1a1b1c;
+        --form-colour: rgb(173, 166, 166);
+        filter: invert(1);
+    }
+
+    img {
+        filter: invert(1); 
+    }
+  }
+
+
+  /* || KEYFRAMNES || */
 
 
 @keyframes skew-x-shakeng{
@@ -491,12 +506,4 @@ h1 {
 
 /* .form__input--color {
     background-color: var(--font-colour);
-} */
-
-/* 
-    [data-theme="dark"] { 
-    --background-color: #958c6f;
-    --primary-color: #aeaa7b;
-    --secondary-color: #d7d095;
-    --font-colour: #1a1b1c;
 } */
