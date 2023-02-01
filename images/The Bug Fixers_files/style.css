@@ -43,7 +43,6 @@ html {
 
 .nav {
     position: fixed;
-    z-index: 10;
     align-items: center;
     width: 100%;
     padding-top: 0.7rem;
@@ -199,23 +198,6 @@ input, textarea {
         background-color: var(--accent-color-1);
     }
 
-
-/* || FORM primitives | */
-
-#output {
-    display: block;
-    position: relative;
-    left: 0px;
-    bottom: 0px;
-    margin-top: -0.5em;
-}
-
-.quote--sum, output {
-    width: 13rem;
-    margin: 1em;
-}
-
-
 #basket {
     z-index: 1;
 }
@@ -224,17 +206,13 @@ input, textarea {
     content: '';
     box-sizing: border-box;
     display: block;
-    margin: 0.6em;
     z-index: -1;
-    left: 0em;
+    left: 0.1em;
     transform: translateX(50vw);
     position: absolute;
     background: rgb(255, 255, 255);
-}
-
-#basket, #basket::before {
-    width: 13.8rem;
-    height: 24.2rem;
+    width: 15rem;
+    height: 25rem;
 }
 
 .form--submit {
@@ -275,14 +253,6 @@ input, textarea {
     border-radius: 0.4rem;
 }
 
-    .form--fields:focus {
-        -webkit-box-shadow: 0 0 10px rgb(0, 0, 0);
-        box-shadow: 0 0 10px rgb(19, 19, 19);
-        animation: skew-x-shakeng 1s linear;
-    }
-
-
-
 .fieldset__no-border {
     border: none;
 }
@@ -290,10 +260,6 @@ input, textarea {
 .fieldset__round-corners {
     border-radius: 1rem;
 }
-
-
-
-
 /* || TYPOGRAPHY || */
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
@@ -458,40 +424,16 @@ h1 {
 
     .form--sidebar {
         grid-area: sidebar;
-        justify-self: center;
+        justify-self: start;
     }
+
+    /* .card--article__inline {
+        display: inline;
+    } */
+
 }
 
 
-@media screen and (prefers-color-scheme: dark) {           
-    :root {
-        --background-color: #b0f4aa;
-        --primary-color: #e4bb7d;
-        --secondary-color: #ecffe6;
-        --accent-color-1: #ffeaa5;
-        --accent-color-2: #e3e3e3;
-        --font-colour: #1a1b1c;
-        --form-colour: rgb(173, 166, 166);
-        filter: invert(1);
-    }
-
-    img {
-        filter: invert(1); 
-    }
-  }
-
-
-  /* || KEYFRAMNES || */
-
-
-@keyframes skew-x-shakeng{
- 0% { transform: skewX(-15deg); }
- 5% { transform: skewX(15deg); }
- 10% { transform: skewX(-15deg); }
- 15% { transform: skewX(15deg); }
- 20% { transform: skewX(0deg); }
- 100% { transform: skewX(0deg); }
-}
 
 /* || STYLES GRAVEYARD || */
 
@@ -506,4 +448,12 @@ h1 {
 
 /* .form__input--color {
     background-color: var(--font-colour);
+} */
+
+/* 
+    [data-theme="dark"] { 
+    --background-color: #958c6f;
+    --primary-color: #aeaa7b;
+    --secondary-color: #d7d095;
+    --font-colour: #1a1b1c;
 } */

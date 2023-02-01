@@ -44,38 +44,34 @@ function givePrice(event) {
     elements.rat.value == 'ratR' ? ratPrice = elements.quantity1.value * 200 : ratPrice = elements.quantity1.value * 500
     elements.cock.value == 'cockR' ? cockPrice = elements.quantity2.value * 200 : cockPrice = elements.quantity2.value * 500
     let oozePrice = elements.quantity3.value * 3000;
-    console.log(ratPrice, cockPrice, oozePrice);
     var quantity = ratPrice + cockPrice + oozePrice;
     // change sidemenu values doesnt work if you submitted in mobile then use desktop, have to press submit on desktop
     // check sidemenu is visible/media
-    const result = (quantity) => {
-        let output = document.getElementsByTagName('output')[0].innerText;
-        quantity == 0 ? document.getElementsByTagName('output')[0].innerText = '' : document.getElementsByTagName('output')[0].innerText = 'TOTAL = £' + quantity;
-    };
-    const reset = (span) => { for (let element of span.children) element.innerHTML = ''; span.style.display = "none"; };
-    if (quantity == 0) { document.getElementsByTagName('output')[0].innerText = ''; console.log(document.getElementsByTagName('output')[0]) }
+    const result = (quantity) => { document.getElementsByTagName('output')[0].value = 'TOTAL = £' + quantity; };
     if (!window.matchMedia('(min-width: 700px)').matches) return result(quantity);
     ['rat', 'cock'].forEach((insect, index) => {
+        if (eval(insect + 'Price') == 0) return;
         var span = document.getElementsByTagName('span')[index];
-        if (eval(insect + 'Price') == 0) { reset(span); return result(quantity); };
         span.style.display = 'block';
         var name = 'Rats';
         var type = 'Regular';
         var individualPrice = '£200';
         var quantityElement = 'quantity1';
         var total = eval(insect + "Price");
-        if (insect != 'rat') { quantityElement = 'quantity2'; name = 'Cockroaches' };
-        if (elements[insect].value == insect + 'M') { type = 'Mutated'; individualPrice = '£500' };
+        if (insect != 'rat') {quantityElement = 'quantity2'; name = 'Cockroaches'}; 
+        if (elements[insect].value == insect + 'M') {type = 'Mutated'; individualPrice = '£500'};
         span.children[0].innerHTML = `${name} (${type})`;
         span.children[1].innerHTML = `${individualPrice} x ${elements[quantityElement].value}`;
         span.children[2].innerHTML = `= £ ${total}`
     });
-    span = document.getElementsByTagName('span')[2];
-    if (oozePrice == 0) { reset(span); return result(quantity); };
-    span.style.display = 'block';
-    span.children[0].innerHTML = 'Ooze'
-    span.children[1].innerHTML = `£3000 x ${elements.quantity3.value}`;
-    span.children[2].innerHTML = '= £' + oozePrice;
+    if (oozePrice != 0) {
+        var span = document.getElementsByTagName('span')[2];
+        // make visible
+        span.style.display = 'block';
+        span.children[0].innerHTML = 'Ooze'
+        span.children[1].innerHTML = `£3000 x ${elements.quantity3.value}`;
+        span.children[2].innerHTML = '= £' + oozePrice;
+    };
     return result(quantity);
 }
 
