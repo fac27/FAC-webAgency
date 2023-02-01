@@ -57,8 +57,9 @@
                 humanity, and we will stop at nothing to protect our
                 clients. Contact us today to learn more about how we can
                 help you in this post-apocalyptic world.</p>
-                <p>Click below to summon bugs.</p>
-                <button type="button" class="nav--button center" onclick="summonBugs()">Bugs</button>
+            <p>Click below to summon bugs.</p>
+            <button type="button" class="nav--button center"
+                onclick="summonBugs()">Bugs</button>
         </section>
         <section id="services" class="card center center-lg">
             <h2 class="center_text">Services</h2>
@@ -84,16 +85,19 @@
                 <p>Our rodent control services include trapping and
                     extermination of rats, mice, and other rodents that threaten
                     to consume what little is left of our civilization.</p>
-            <group class="row align-end">
-            <group class="group">
-                <p><b>Regular: </b></p><p> prices from £200</p>
-                <p><b>Mutant: </b></p><p>prices from £500</p>
-            </group>
-            <group class="group">
-                <img src="./images/Pests/rat.jpeg" alt="a drawing of a green mutant rat with yellow eyes and large, sharp fangs. It has a muscular body and a spined tail." class="center center-xs fig--img">
-            </group>
-            </group>
-                
+                <group class="row space-between align-center">
+                    <group class="group">
+                        <p><b>Regular: </b></p><p> prices from £200</p>
+                        <p><b>Mutant: </b></p><p>prices from £500</p>
+                    </group>
+                    <group class="group">
+                        <img src="./images/Pests/rat.jpeg" alt="a drawing of a
+                            green mutant rat with yellow eyes and large, sharp
+                            fangs. It has a muscular body and a spined tail."
+                            class="center center-xs fig--img">
+                    </group>
+                </group>
+
             </div>
 
             <div id="cockroaches" class="card--shadow tab--content">
@@ -102,15 +106,18 @@
                     cockroaches and other common household pests. We use the
                     latest in extermination technology and techniques to
                     eliminate these pests.</p>
-                    <group class="row align-end">
-                        <group class="group">
-                            <p><b>Regular: </b></p><p> prices from £200</p>
-                            <p><b>Irradiated: </b></p><p>prices from £500</p>
-                        </group>
-                        <group class="group">
-                            <img src="./images/Pests/roach.jpeg" alt="A digital drawing of a cockroach wearing a crown standing in front of a ruined pillar. There is a golden goblet on the ground." class="center center-xs fig--img">
-                        </group>
-                        </group>
+                <group class="row space-between align-center">
+                    <group class="group">
+                        <p><b>Regular: </b></p><p> prices from £200</p>
+                        <p><b>Irradiated: </b></p><p>prices from £500</p>
+                    </group>
+                    <group class="group">
+                        <img src="./images/Pests/roach.jpeg" alt="A digital
+                            drawing of a cockroach wearing a crown standing in
+                            front of a ruined pillar. There is a golden goblet
+                            on the ground." class="center center-xs fig--img">
+                    </group>
+                </group>
             </div>
 
             <div id="ooze" class="card--shadow tab--content">
@@ -119,15 +126,18 @@
                     this new, dangerous pest called the "ooze". Our team of
                     experts would use the latest techniques and technology to
                     eliminate this pest and prevent it from spreading.</p>
-                    <group class="row align-end">
-                        <group class="group">
-                            <p><b>Regular: </b></p><p> prices from £2000</p>
-                            <p><b>Mutant: </b></p><p>prices from £5000</p>
-                        </group>
-                        <group class="group">
-                            <img src="./images/Pests/ooze.jpeg" alt="A digital drawing of a green, bulbous pile of ooze on the ground. The scene is at night with a forest in the background." class="center center-xs fig--img">
-                        </group>
-                        </group>
+                <group class="row space-between align-center">
+                    <group class="group">
+                        <p><b>Regular: </b></p><p> prices from £2000</p>
+                        <p><b>Mutant: </b></p><p>prices from £5000</p>
+                    </group>
+                    <group class="group">
+                        <img src="./images/Pests/ooze.jpeg" alt="A digital
+                            drawing of a green, bulbous pile of ooze on the
+                            ground. The scene is at night with a forest in the
+                            background." class="center center-xs fig--img">
+                    </group>
+                </group>
             </div>
         </section>
 
@@ -233,7 +243,8 @@
                         required/>
                 </div>
                 <div class="stack-xs center">
-                    <label class="form--labels" for="message" aria-hidden="true">Message</label>
+                    <label class="form--labels" for="message"
+                        aria-hidden="true">Message</label>
                     <textarea class="form--fields full-width" id="message"
                         placeholder="Message"
                         name="message"
@@ -262,9 +273,10 @@
                 form__grid_on-desktop" onsubmit="(e)=> {e.prevent.default()}">
                 <fieldset class="stack-sm center fieldset__no-border
                     form--main">
-                    <fieldset class="stack-sm fieldset__round-corners" role=none> 
+                    <fieldset class="stack-sm fieldset__round-corners"
+                        role=none>
                         <legend> Rats </legend>
-                        <fieldset class="stack-md fieldset__no-border" >
+                        <fieldset class="stack-md fieldset__no-border">
                             <div class="row align-center">
                                 <input
                                     class="margin-0 qoute-input"
@@ -296,9 +308,10 @@
                                 id="quantity1" min="0" max="200" size="3ex">
                         </fieldset>
                     </fieldset>
-                    <fieldset class="stack-sm fieldset__round-corners" role=none>
+                    <fieldset class="stack-sm fieldset__round-corners"
+                        role=none>
                         <legend> Cockroaches </legend>
-                        <fieldset class="stack-md fieldset__no-border" >
+                        <fieldset class="stack-md fieldset__no-border">
                             <div class="row align-center">
                                 <input
                                     class="margin-0 qoute-input"
@@ -330,7 +343,8 @@
                                 id="quantity2" min="0" max="200" size="3ex">
                         </fieldset>
                     </fieldset>
-                    <fieldset class="stack-sm fieldset__round-corners" role=none> 
+                    <fieldset class="stack-sm fieldset__round-corners"
+                        role=none>
                         <legend> Ooze </legend>
                         <fieldset id="quantityField" class="row
                             space-between
