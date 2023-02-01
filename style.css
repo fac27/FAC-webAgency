@@ -360,6 +360,9 @@ h1 {
     justify-content: flex-start;
 }
 
+.align-end {
+    align-items: end;
+}
 
 
 
@@ -391,7 +394,9 @@ h1 {
 .center-sm {
     max-width: 10rem;
 }
-
+.center-xs{
+    max-width: 7rem;
+}
 
 
 
