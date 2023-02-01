@@ -223,6 +223,7 @@ input, textarea {
     content: '';
     box-sizing: border-box;
     display: block;
+    margin-top: 0.6em;
     z-index: -1;
     left: 0em;
     transform: translateX(50vw);
@@ -232,7 +233,7 @@ input, textarea {
 
 #basket, #basket::before {
     width: 14rem;
-    height: 25rem;
+    height: 24.4rem;
 }
 
 .form--submit {
